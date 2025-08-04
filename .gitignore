@@ -1,0 +1,6 @@
+*.zip
+*.gz
+local/templates/books/backup_orig.zip
+local/templates.zip
+/bitrix/
+/upload/

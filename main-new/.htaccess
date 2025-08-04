@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted area"
+AuthUserFile /var/www/u2975562/data/www/physnetwork.ru/.htpasswd
+require valid-user
