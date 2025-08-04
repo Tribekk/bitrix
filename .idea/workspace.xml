@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14faddd0-880c-4abd-b89e-2edf16dc7869" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/templates/books/components/bitrix/menu/horizontal_multilevel/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/templates/books/components/bitrix/menu/horizontal_multilevel/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <updated>1754238832373</updated>
       <workItem from="1754238833393" duration="5043000" />
       <workItem from="1754317987656" duration="619000" />
-      <workItem from="1754321575870" duration="3486000" />
+      <workItem from="1754321575870" duration="6860000" />
     </task>
     <servers />
   </component>
