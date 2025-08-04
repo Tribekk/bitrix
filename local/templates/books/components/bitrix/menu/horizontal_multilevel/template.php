@@ -90,7 +90,7 @@
                                 <a href="#">Решения 1С</a>
                             </div>
                             <div>
-                                <a href="#">Услуги</a>
+                                <a href="/uslugi-i-avtomatizacia/">Услуги</a>
                             </div>
                             <div>
                                 <a href="#">Кейсы</a>

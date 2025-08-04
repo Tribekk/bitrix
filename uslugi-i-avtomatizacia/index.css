@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Finlandica';
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Finlandica Bold'), /* проверка наличия шрифта в ОС клиента */
+    url('local/templates/books/fonts/Finlandica-Bold.ttf');
+}
+@font-face {
+    font-family: 'Finlandica';
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Finlandica Regular'), /* проверка наличия шрифта в ОС клиента */
+    url('local/templates/books/fonts/Finlandica-Regular.ttf');
+}
+.header-info{
+    display: none;
+}
+.header-back{
+    display: none;
+}
+.header-top{
+    height: 160px;
+}
+.container-block{
+    margin-top: 40px;
+    padding: 0 16px;
+}
+.page-header{
+    width: 100%;
+    height: 376px;
+    margin: 0 auto 40px;
+    background: url("/uslugi-i-avtomatizacia/src/page-header_pc.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding: 48px 18.5%;
+}
+.page-header .text{
+    font-family: Finlandica, serif;
+    color: white;
+    position: absolute;
+    width: 55%;
+    line-height: 1;
+}
+.page-header .text h1{
+    margin: 130px 0 0;
+    font-size: 64px;
+    font-weight: 700;
+}
+.page-header .text h2{
+    margin: 40px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
