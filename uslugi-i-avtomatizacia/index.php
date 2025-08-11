@@ -43,7 +43,7 @@ $APPLICATION->SetTitle("Главная страница");
                     <div class="service-title">Техническая поддержка</div>
                     <div class="service-desc">Абонентская поддержка с прозрачными SLA</div>
                 </div>
-                <div>
+                <div class="last-item">
                     <div class="service-title">Повышение производительности</div>
                     <div class="service-desc">Ускоряем отклик, снижаем нагрузку на сервер, исключаем ошибки при росте базы</div>
                 </div>
@@ -54,39 +54,57 @@ $APPLICATION->SetTitle("Главная страница");
         <section class="steps">
             <h3>Внедряем 1С с нуля</h3>
             <div class="steps-list">
-                <div>
-                    <span class="step-num">01</span>
-                    <div class="step-title">Анализ бизнес-процессов</div>
-                    <div class="step-desc">Проводим интервью и изучаем требования</div>
+                <div class="step step-1">
+                    <span class="step-num">ЭТАП 01</span>
+                    <div>
+                        <div class="step-title">Анализ бизнес-процессов</div>
+                        <div class="step-desc">Проводим интервью и изучаем требования</div>
+                    </div>
                 </div>
-                <div>
-                    <span class="step-num">02</span>
-                    <div class="step-title">Проектирование</div>
-                    <div class="step-desc">Составляем технический проект, план и сроки внедрения</div>
+                <div class="step step-2">
+                    <span class="step-num">ЭТАП 02</span>
+                    <div>
+                        <div class="step-title">Проектирование</div>
+                        <div class="step-desc">Составляем технический проект, план и сроки внедрения</div>
+                    </div>
                 </div>
-                <div>
-                    <span class="step-num">03</span>
-                    <div class="step-title">Разработка и доработка модулей</div>
-                    <div class="step-desc">1. Предварительно тестируем и проверяем<br>2. Настраиваем и запускаем систему на фокусной группе<br>3. Полностью запускаем систему</div>
+                <div class="step step-3">
+                    <span class="step-num">ЭТАП 03</span>
+                    <div>
+                        <div class="step-title">Разработка и доработка модулей</div>
+                        <ol>
+                            <li>Предварительно тестируем и проверяем</li>
+                            <li>Настраиваем и запускаем систему на фокусной группе</li>
+                            <li>Полностью запускаем систему</li>
+                        </ol>
+                    </div>
                 </div>
-                <div>
-                    <span class="step-num">04</span>
-                    <div class="step-title">Обучение сотрудников</div>
-                    <div class="step-desc">Составляем гайды и поддерживаем пользователей</div>
+                <div class="step step-4">
+                    <span class="step-num">ЭТАП 04</span>
+                    <div>
+                        <div class="step-title">Обучение сотрудников</div>
+                        <div class="step-desc">Составляем гайды и поддерживаем пользователей</div>
+                    </div>
                 </div>
-                <div>
-                    <span class="step-num">05</span>
-                    <div class="step-title">Техническая поддержка</div>
-                    <div class="step-desc">Оказываем абонентскую поддержку с прозрачными SLA</div>
+                <div class="step step-5">
+                    <span class="step-num">ЭТАП 05</span>
+                    <div>
+                        <div class="step-title">Техническая поддержка</div>
+                        <div class="step-desc">Оказываем абонентскую поддержку с прозрачными SLA</div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA: Оставить заявку -->
-        <section class="cta">
-            <div class="cta-title">Обсудим, как можно сократить бюджет?</div>
-            <div class="cta-subtitle">Задайте вопрос, проверьте КП или пригласите в тендер</div>
-            <button class="cta-btn">Оставить заявку</button>
+        <section class="section">
+            <div class="cta">
+                <div class="cta-title">Обсудим, как можно сократить бюджет?</div>
+                <div class="cta-right">
+                    <div class="cta-subtitle">Задайте вопрос, проверьте КП <br> или пригласите в тендер</div>
+                    <button class="cta-btn">Оставить заявку</button>
+                </div>
+            </div>
         </section>
 
         <!-- Продукты 1С -->
@@ -123,8 +141,15 @@ $APPLICATION->SetTitle("Главная страница");
 
         <!-- Форсайт-сессии -->
         <section class="foresight">
-            <div class="foresight-title">Форсайт-сессии с независимыми экспертами</div>
-            <div class="foresight-desc">Для каждой задачи мы подбираем профильных экспертов, которые уже прошли путь автоматизации и знают, как устроены процессы на практике.</div>
+            <div class="foresight_container">
+                <div class="left">
+                    <div class="foresight-title">Форсайт-сессии с независимыми экспертами</div>
+                    <div class="foresight-desc">Для каждой задачи мы подбираем профильных экспертов, которые уже прошли путь автоматизации и знают, как устроены процессы на практике.</div>
+                </div>
+                <div class="right">
+                    <img src="/uslugi-i-avtomatizacia/src/image.png" alt="">
+                </div>
+            </div>
         </section>
 
         <!-- Почему мы -->
@@ -138,38 +163,107 @@ $APPLICATION->SetTitle("Главная страница");
             </ul>
         </section>
 
-        <!-- Кейсы (заглушка, повторяющиеся блоки) -->
         <section class="cases">
             <h3>Наши кейсы</h3>
-            <div class="cases-list">
-                <div class="case">
-                    <div class="case-title">Экзотермический экситон</div>
-                    <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                </div>
-                <div class="case">
-                    <div class="case-title">Экзотермический экситон</div>
-                    <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                </div>
+
+            <div class="cases-viewport">
+                <ul class="cases-track">
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                    <li class="case-card">
+                        <div class="case-badge">кейс</div>
+                        <div class="case-title">Экзотермический экситон</div>
+                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <!-- Форма заявки -->
+
         <section class="form-section">
-            <h3>Оставьте заявку</h3>
-            <div class="form-desc">В короткие сроки подготовим коммерческое предложение или проверим техническое задание</div>
+            <div class="form-left">
+                <h3>Оставьте заявку</h3>
+                <div class="form-desc">
+                    В короткие сроки подготовим коммерческое предложение или проверим техническое задание
+                </div>
+            </div>
+
             <form class="form">
-                <input type="text" placeholder="Имя">
-                <input type="tel" placeholder="Телефон">
-                <input type="email" placeholder="E-mail">
-                <textarea placeholder="Комментарий"></textarea>
+                <input type="text" class="field-fio" placeholder="ФИО">
+                <input type="text" class="field-company" placeholder="Название компании">
+                <input type="text" class="field-position" placeholder="Должность">
+                <input type="tel"  class="field-phone" placeholder="+ 7 987 654 32 10">
+                <textarea placeholder="Кратко расскажите о своей задаче"></textarea>
                 <div class="form-policy">
-                    <label>
-                        <input type="checkbox" required>
-                        Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Политикой оператора</a>
+                    <input type="checkbox" id="policy" required>
+                    <label for="policy">Я даю свое согласие на обработку персональных данных в соответствии с
+                        <a href="#">Политикой оператора</a> в отношении обработки персональных данных
                     </label>
                 </div>
                 <button type="submit" class="form-btn">Отправить</button>
             </form>
         </section>
     </div>
+
+    <script>
+        (() => {
+            const vps = document.querySelectorAll('.cases-viewport');
+            vps.forEach(vp => {
+                // колесо мыши -> горизонтальный скролл
+                vp.addEventListener('wheel', (e) => {
+                    // если вертикальная прокрутка больше горизонтальной — скроллим по X
+                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                        vp.scrollLeft += e.deltaY;
+                        e.preventDefault(); // важно: иначе страница прокручивается
+                    }
+                }, { passive: false });
+
+                // drag-to-scroll (мышь/тач/стилус)
+                let startX = null, startScrollLeft = 0;
+                vp.addEventListener('pointerdown', (e) => {
+                    startX = e.clientX;
+                    startScrollLeft = vp.scrollLeft;
+                    vp.setPointerCapture(e.pointerId);
+                    vp.style.scrollSnapType = 'none'; // отключим снап во время перетаскивания
+                });
+                vp.addEventListener('pointermove', (e) => {
+                    if (startX !== null) {
+                        const dx = e.clientX - startX;
+                        vp.scrollLeft = startScrollLeft - dx;
+                    }
+                });
+                const endDrag = () => {
+                    startX = null;
+                    // вернём снап
+                    vp.style.scrollSnapType = 'x proximity';
+                };
+                vp.addEventListener('pointerup', endDrag);
+                vp.addEventListener('pointercancel', endDrag);
+                vp.addEventListener('pointerleave', () => { if (startX !== null) endDrag(); });
+            });
+        })();
+    </script>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
