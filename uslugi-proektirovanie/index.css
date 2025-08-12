@@ -13,6 +13,9 @@
     font-weight: 400;
     src: local('Finlandica Regular'), /* проверка наличия шрифта в ОС клиента */ url('local/templates/books/fonts/Finlandica-Regular.ttf');
 }
+*{
+    font-family: Finlandica, serif;
+}
 
 .header-info {
     display: none;
@@ -51,17 +54,16 @@
 .page-header .text {
     font-family: Finlandica, serif;
     color: white;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 130px 25vw 48px 301px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 48px 25vw 48px 301px;
     line-height: 1;
 }
 
 .page-header .text h1 {
     text-transform: uppercase;
+    margin: 43px 0 0 0;
     font-size: 64px;
     font-weight: 700;
 }
@@ -72,15 +74,19 @@
     font-weight: 400;
 }
 
-@media screen and (max-width: 1600px) {
-    .page-header .text {
-        padding: 130px 10vw 48px 301px;
+@media (max-width: 1340px){
+    .page-header .text h1 {
+        font-size: 48px;
+    }
+
+    .page-header .text h2 {
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 1250px) {
     .page-header .text {
-        padding: 130px 5vw 48px 5vw;
+        padding: 64px 328px 40px 24px;
     }
 }
 
@@ -104,13 +110,19 @@
     }
 
     .page-header {
-        height: 208px;
+        height: 290px;
     }
 }
 
-@media screen and (max-width: 916px) {
-    .page-header .text {
-        padding: 64px 150px 40px 24px;
+@media screen and (max-width: 904px) {
+    .page-header .text h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    .page-header .text h2 {
+        margin: 24px 0;
+        font-size: 18px;
     }
 }
 
@@ -147,7 +159,7 @@
     }
 
     .page-header {
-        height: 240px;
+        height: auto;
     }
 }
 
@@ -176,14 +188,15 @@ section {
 
 .one-c-services > div {
     background: #EDE3F7;
-    flex: 1 1 30vw; /* <- вот тут! 320px — минимальная ширина блока */
-    min-width: 260px; /* <- минимально сколько можно */
+    flex: 1 1 570px; /* <- вот тут! 320px — минимальная ширина блока */
+    min-width: 256px; /* <- минимально сколько можно */
     max-width: 100%; /* <- не ограничиваем сверху */
-    height: 182px;
+    height: auto;
     border-radius: 8px;
     padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 0 2px 12px rgba(36, 43, 66, 0.06);
     transition: background 0.2s;
 }
@@ -196,6 +209,7 @@ section {
     font-family: Finlandica, serif;
     font-weight: 700;
     font-size: 28px;
+    margin-bottom: 24px;
 }
 
 .service-desc {
@@ -209,7 +223,9 @@ section {
         margin: 32px 0;
         padding: 24px;
     }
-
+    .one-c-services {
+        gap: 16px;
+    }
     .one-c-optimize h3 {
         font-size: 40px;
         margin-bottom: 32px;
@@ -217,9 +233,8 @@ section {
     }
 
     .one-c-services > div {
-        flex: 1 1 25vw;
+        flex: 1 1 464px;
         min-width: 260px;
-        height: 189px;
         border-radius: 8px;
         padding: 24px;
         box-sizing: border-box;
@@ -273,290 +288,233 @@ section {
     margin-bottom: 48px;
 }
 
-.steps-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0;
-}
-
-/* Сетка */
-.step-1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.step-2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.step-3 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-}
-
-.step-4 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.step-5 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-/* Общие стили карточек */
-.step {
-    background: #fff;
-    border: 3px solid #EDE3F7;
-    border-radius: 8px;
-    padding: 40px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 250px;
-    position: relative;
-    justify-content: space-between;
-    /* плавная тень при ховере */
-    transition: box-shadow .15s;
-}
-
-.step:hover {
-    box-shadow: 0 4px 32px rgba(70, 61, 109, 0.11);
-}
-
-/* Номер этапа */
-.step-num {
-    font-family: Finlandica, serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #7639B2;
-    margin-bottom: 12px;
+.directions h3 {
     text-transform: uppercase;
-    letter-spacing: 1.3px;
-    opacity: 0.85;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    padding-left: 253px;
 }
 
-/* Заголовок этапа */
-.step-title {
-    font-family: Finlandica, serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #19171A;
-    margin-bottom: 8px;
-}
-
-.step-3 .step-title {
-    margin-bottom: 49px;
-}
-
-/* Описание/подзаголовок */
-.step-desc {
-    font-family: Finlandica, serif;
+.directions .subtitle {
+    padding-left: 253px;
+    margin: 24px 0 48px;
     font-size: 24px;
-    font-weight: 400;
-    color: #19171A;
-    margin-bottom: 0;
-    line-height: 1.4;
+    color: #160F1A;
 }
 
-/* Вложенный список (шаг 3) */
-.step-3 ol {
-    margin: 12px 0 0 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: step-list;
+.dir-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #EDE3F7;
+    border-radius: 10px;
+    padding: 24px;
+    min-height: 132px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    justify-content: flex-start;
+    transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
 }
 
-.step-3 ol li {
-    font-family: Finlandica, serif;
-    background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
-    border-radius: 8px;
-    padding: 24px 12px 24px 56px;
-    color: #19171A;
-    font-size: 24px;
-    font-weight: 400;
-    position: relative;
-    min-height: 32px;
+.card:hover {
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    border-color: #e1d2ff;
 }
 
-.step-3 ol li::before {
-    counter-increment: step-list;
-    content: counter(step-list) ".";
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9659F8;
+.abbr {
     font-weight: 700;
     font-size: 16px;
+    color: #7639B2;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
+.title {
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+/* Во втором ряду объединяем 3 и 4 колонки */
+.card.wide {
+    grid-column: 3 / span 2;
+}
+
+@media (max-width: 1570px) {
+    .card.wide{
+        padding-right: 0;
+    }
+}
+
+/* Адаптив */
 @media (max-width: 1024px) {
-    .steps h3 {
-        margin-bottom: 32px;
-        padding-left: 0;
+    .directions h3 {
         font-size: 40px;
-        font-weight: 600;
+        padding-left: 0;
     }
 
-    .steps-list {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto auto; /* 3 строки */
-        gap: 20px;
-    }
-
-    /* Раскладка */
-    .step-1 {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .step-2 {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .step-3 {
-        grid-column: 1 / span 2;
-        grid-row: 2;
-        min-height: 280px;
-    }
-
-    .step-4 {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .step-5 {
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    /* Нежная ужимка типографики/отступов под 1024 */
-    .step {
-        padding: 24px;
-        min-height: 169px;
-    }
-
-    .step-num {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .step-title {
-        font-size: 24px;
-        margin-bottom: 6px;
-    }
-
-    .step-desc {
+    .directions .subtitle {
+        padding-left: 0;
+        margin: 16px 0 32px;
         font-size: 20px;
     }
 
-    .step-3 .step-title {
-        margin-bottom: 20px;
-    }
-
-    .step-3 ol {
-        gap: 8px;
-    }
-
-    .step-3 ol li {
-        padding: 16px 12px 16px 44px;
-        font-size: 20px;
-    }
-
-    .step-3 ol li::before {
-        left: 16px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .steps h3 {
-        margin-bottom: 24px;
-        font-size: 28px;
-        font-weight: 600;
-    }
-
-    .steps-list {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    .dir-grid {
         gap: 16px;
     }
 
-    /* Каждый шаг идёт своим блоком */
-    .step-1 {
-        grid-column: auto;
-        grid-row: auto;
+    .card {
+        padding: 16px;
+        justify-content: space-between;
+        min-height: 120px;
     }
 
-    .step-2 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .step-3 {
-        grid-column: auto;
-        grid-row: auto;
-        min-height: auto;
-    }
-
-    .step-4 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .step-5 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    /* Подгоняем отступы и размеры текста под маленький экран */
-    .step {
-        padding: 24px;
-        min-height: auto;
-    }
-
-    .step-num {
-        font-size: 12px;
-        margin-bottom: 8px;
-    }
-
-    .step-title {
-        font-size: 20px;
-        margin-bottom: 6px;
-    }
-
-    .step-desc {
-        font-size: 18px;
-    }
-
-    /* Для шага 3 — список компактнее */
-    .step-3 .step-title {
+    .abbr {
+        font-size: 14px;
         margin-bottom: 16px;
     }
 
-    .step-3 ol {
-        gap: 8px;
-    }
-
-    .step-3 ol li {
-        padding: 16px 16px 16px 36px;
-        font-size: 18px;
-    }
-
-    .step-3 ol li::before {
-        left: 16px;
-        font-size: 12px;
+    .title {
+        font-size: 20px;
+        line-height: 1.25;
     }
 }
 
+@media (max-width:812px){
+    .dir-grid{
+        display:flex;
+        gap:14px;
+        margin-right: -40px;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        padding:2px; /* чтобы тень не обрезалась */
+    }
+    .dir-grid::-webkit-scrollbar{ height:0; } /* скрыть скроллбар */
+
+    .card{
+        flex:0 0 78%;          /* ширина карточки на телефоне/планшете */
+        min-width:260px;
+        scroll-snap-align:start;
+    }
+    .card.wide{ flex-basis:78%; } /* в слайдере без объединения */
+
+    .dir-nav{ display:block; }
+}
+
+@media (max-width: 401px) {
+    .directions h3{
+        font-size: 28px;
+    }
+    .directions .subtitle{
+        font-size: 18px;
+        margin: 16px 0 24px;
+    }
+    .abbr{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 18px;
+    }
+}
+.certs h3 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    padding-left: 253px;
+}
+.certs .subtitle {
+    padding-left: 253px;
+    margin: 24px 0 48px;
+    font-size: 24px;
+    color: #160F1A;
+}
+
+/* Десктоп — сетка */
+.certs-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+@media (max-width: 1280px){
+    .certs-grid{ grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 1100px){
+    .certs-grid{ grid-template-columns: repeat(4, 1fr); }
+}
+
+.cert{
+    margin: 0;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow .15s, transform .15s, border-color .15s;
+}
+.cert:hover{
+    box-shadow: 0 6px 28px rgba(0,0,0,.08);
+    transform: translateY(-1px);
+    border-color: #e1d2ff;
+}
+
+/* Картинки одинаково вписываем */
+.cert img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 11;      /* под твой макет; при необходимости подстрой */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* <= 812px — превращаем в слайдер */
+@media (max-width: 1280px){
+    .certs-grid{
+        margin-right: -56px;
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;       /* чуть места под тень */
+    }
+    .certs-grid::-webkit-scrollbar{ height: 0; } /* скрыть скроллбар */
+
+    .cert{
+        flex: 0 0 200px;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+}
+
+@media (max-width: 1024px){
+    .certs h3 {
+        font-size: 40px;
+        font-weight: 600;
+        padding-left: 0;
+    }
+    .certs .subtitle {
+        padding-left: 0;
+        margin: 16px 0 32px;
+        font-size: 20px;
+    }
+}
+
+/* Совсем мелкие экраны */
+@media (max-width: 570px){
+    .certs h3{ font-size: 28px; }
+    .certs .subtitle {
+        margin: 16px 0 24px;
+        font-size: 18px;
+    }
+}
 
 .cta {
     background: linear-gradient(90deg, #EDE3F7 0%, #F5D4E2 100%);
@@ -1498,22 +1456,6 @@ input::placeholder, textarea::placeholder{
     .form-btn{
         height: 42px;
         font-size: 14px;
-    }
-}
-
-/* адаптив */
-@media (max-width: 900px) {
-    .page-header {
-        padding: 36px 8%;
-    }
-
-    .one-c-services, .product-categories, .steps-list, .cases-list {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .one-c-services > div, .product-categories > div, .steps-list > div, .case {
-        max-width: 100%;
     }
 }
 

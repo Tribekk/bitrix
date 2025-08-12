@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14faddd0-880c-4abd-b89e-2edf16dc7869" name="Changes" comment="">
+    <list default="true" id="14faddd0-880c-4abd-b89e-2edf16dc7869" name="Changes" comment="услуги страница">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/uslugi-i-avtomatizacia/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tribekk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Tribekk/bitrix.git&quot;,
+    &quot;accountId&quot;: &quot;adb8a0a3-3abe-49ea-ab59-d93beb6caba9&quot;
+  }
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../php/php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -77,11 +87,25 @@
       <workItem from="1754576467281" duration="114000" />
       <workItem from="1754921424515" duration="6503000" />
       <workItem from="1754928867202" duration="4159000" />
-      <workItem from="1754933275865" duration="572000" />
+      <workItem from="1754933275865" duration="5451000" />
+      <workItem from="1755010468404" duration="594000" />
     </task>
+    <task id="LOCAL-00001" summary="услуги страница">
+      <option name="closed" value="true" />
+      <created>1754939555328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754939555328</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="услуги страница" />
+    <option name="LAST_COMMIT_MESSAGE" value="услуги страница" />
   </component>
 </project>
