@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14faddd0-880c-4abd-b89e-2edf16dc7869" name="Changes" comment="услуги страница">
+    <list default="true" id="14faddd0-880c-4abd-b89e-2edf16dc7869" name="Changes" comment="услуги проектирования страница">
+      <change afterPath="$PROJECT_DIR$/uslugi-ekspertiza/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-ekspertiza/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-montazh/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-montazh/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-montazh/src/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-service-support/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uslugi-service-support/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +41,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Tribekk/bitrix.git&quot;,
-    &quot;accountId&quot;: &quot;adb8a0a3-3abe-49ea-ab59-d93beb6caba9&quot;
+    &quot;accountId&quot;: &quot;580af670-5259-450c-abea-4bf37c75e13d&quot;
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../php/php.exe" />
@@ -54,6 +61,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/OSPanel/home/bitrix/public&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -64,6 +72,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\home\bitrix\public" />
+      <recent name="C:\OSPanel\home\bitrix\public\uslugi-montazh\src" />
+      <recent name="C:\OSPanel\home\bitrix\public\uslugi-proektirovanie\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,7 +103,12 @@
       <workItem from="1754921424515" duration="6503000" />
       <workItem from="1754928867202" duration="4159000" />
       <workItem from="1754933275865" duration="5451000" />
-      <workItem from="1755010468404" duration="594000" />
+      <workItem from="1755010468404" duration="9988000" />
+      <workItem from="1755097343206" duration="2304000" />
+      <workItem from="1755183577804" duration="226000" />
+      <workItem from="1755185121356" duration="4350000" />
+      <workItem from="1755273569266" duration="4824000" />
+      <workItem from="1755333110410" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="услуги страница">
       <option name="closed" value="true" />
@@ -98,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754939555328</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="услуги проектирования страница">
+      <option name="closed" value="true" />
+      <created>1755021554666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755021554666</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="услуги страница" />
-    <option name="LAST_COMMIT_MESSAGE" value="услуги страница" />
+    <MESSAGE value="услуги проектирования страница" />
+    <option name="LAST_COMMIT_MESSAGE" value="услуги проектирования страница" />
   </component>
 </project>
