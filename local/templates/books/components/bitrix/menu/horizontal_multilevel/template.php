@@ -89,14 +89,26 @@
                             <div>
                                 <a href="#">Решения 1С</a>
                             </div>
-                            <div>
-                                <a href="/uslugi-i-avtomatizacia/">Услуги</a>
+                            <div class="has-submenu" id="menu-services">
+                                <button type="button" class="menu-toggle" aria-haspopup="true" aria-expanded="false">
+                                    Услуги
+                                    <span class="menu-caret"></span>
+                                </button>
+
+                                <ul class="submenu" role="menu">
+                                    <li role="none"><a role="menuitem" href="/uslugi-i-avtomatizacia/">Автоматизация</a></li>
+                                    <li role="none"><a role="menuitem" href="/uslugi-proektirovanie/">Проектирование</a></li>
+                                    <li role="none"><a role="menuitem" href="/uslugi-montazh/">Монтаж</a></li>
+                                    <li role="none"><a role="menuitem" href="/uslugi-ekspertiza/">Экспертиза</a></li>
+                                    <li role="none"><a role="menuitem" href="/uslugi-service-support/">Сервисная поддержка</a></li>
+                                    <li role="none"><a role="menuitem" href="/uslugi-avto-product/">Автоматизация продукта</a></li>
+                                </ul>
                             </div>
                             <div>
-                                <a href="#">Кейсы</a>
+                                <a href="/keis/">Кейсы</a>
                             </div>
                             <div>
-                                <a href="/contact">Контакты</a>
+                                <a href="/contact/">Контакты</a>
                             </div>
                         </div>
                         <div class="header-right">
@@ -111,8 +123,18 @@
                                 <div id="horizontal-multilevel-menu">
                                     <ul>
                                         <li><a href="#">Решения 1С</a></li>
-                                        <li><a href="#">Услуги</a></li>
-                                        <li><a href="#">Кейсы</a></li>
+                                        <li class="m-has-sub">
+                                            <button type="button" class="m-toggle" aria-expanded="false">
+                                                Услуги
+                                                <span class="m-caret"></span>
+                                            </button>
+                                            <ul class="m-sub">
+                                                <li><a href="/uslugi-i-avtomatizacia/vnedrenie">Внедрение</a></li>
+                                                <li><a href="/uslugi-i-avtomatizacia/soprovozhdenie">Сопровождение</a></li>
+                                                <li><a href="/uslugi-i-avtomatizacia/konsultacii">Консультации</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/keises/">Кейсы</a></li>
                                         <li><a href="/contact">Контакты</a></li>
                                     </ul>
                                     <div class="menu_contacts">
@@ -138,3 +160,84 @@
     </div>
   </div>
 <?endif?>
+
+<script>
+    (function () {
+        const services = document.querySelector('.desktopMenu .has-submenu');
+        if (!services) return;
+
+        const btn  = services.querySelector('.menu-toggle');
+        const menu = services.querySelector('.submenu');
+
+        function closeMenu(){
+            services.classList.remove('open');
+            btn.setAttribute('aria-expanded','false');
+        }
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const willOpen = !services.classList.contains('open');
+            document.querySelectorAll('.desktopMenu .has-submenu.open').forEach(n => {
+                if (n !== services) n.classList.remove('open');
+            });
+            services.classList.toggle('open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+
+        // закрываем при клике вне меню
+        document.addEventListener('click', (e) => {
+            if (!services.contains(e.target)) closeMenu();
+        });
+
+        // закрытие по Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMenu();
+        });
+    })();
+</script>
+
+<script>
+    (function(){
+        function initMobileServices(){
+            const wrap = document.querySelector('.menu #horizontal-multilevel-menu');
+            if (!wrap) return;
+            const item  = wrap.querySelector('.m-has-sub');
+            if (!item) return;
+
+            const btn   = item.querySelector('.m-toggle');
+            const sub   = item.querySelector('.m-sub');
+
+            // открыть/закрыть по клику
+            btn.addEventListener('click', function(e){
+                e.stopPropagation();
+                const willOpen = !item.classList.contains('open');
+                // если нужен режим "один открыт" — закрываем остальные:
+                wrap.querySelectorAll('.m-has-sub.open').forEach(n => n !== item && n.classList.remove('open'));
+                item.classList.toggle('open', willOpen);
+                btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            });
+
+            // клик вне подпункта — закрыть
+            document.addEventListener('click', function(e){
+                if (window.innerWidth > 1300) return;     // только мобильный
+                if (!item.contains(e.target)) {
+                    item.classList.remove('open');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        }
+
+        // инициализация только на мобильном
+        function boot(){
+            if (window.innerWidth <= 1300) initMobileServices();
+        }
+        boot();
+
+        // при ресайзе закрываем раскрытое меню при уходе в десктоп
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1300){
+                document.querySelectorAll('.m-has-sub.open').forEach(el => el.classList.remove('open'));
+            }
+        });
+    })();
+</script>

@@ -576,6 +576,7 @@ a {
     margin: 88px 16px 16px;
     border: 0 none;
     font-family: Finlandica;
+    overflow: visible;
     line-height: 1.2;
     color: #FAF5FF;
     background-color: #7639B2;
@@ -624,7 +625,7 @@ a {
     padding: 0;
     width: 100%;
 }
-.footer-menu ul {
+.footer-menu > ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -1249,3 +1250,173 @@ a {
     }
 }
 /* END новая верстка */
+/* ==== ПОПАП "УСЛУГИ" — ТОЛЬКО ДЛЯ ДЕСКТОПА (>1300px) ==== */
+@media (min-width: 1301px) {
+    /* чтобы попап не обрезался */
+    .header-top { overflow: visible; }
+
+    .desktopMenu .has-submenu { position: relative; }
+
+    /* кнопка-триггер вместо ссылки */
+    .menu-toggle{
+        background:none; border:0; padding:0; font:inherit;
+        text-transform:inherit; font-weight:700; cursor:pointer;
+        display:inline-flex; align-items:center; gap:8px; color:#160F1A;
+    }
+
+    /* маленькая стрелочка */
+    .menu-caret{
+        width:0; height:0; border:5px solid transparent;
+        border-top-color:#160F1A; transform:translateY(2px);
+        transition: transform .15s ease;
+    }
+
+    /* попап */
+    .desktopMenu .submenu{
+        position:absolute; left:50%; top:calc(100% + 12px);
+        transform:translateX(-50%) translateY(-6px);
+        min-width:240px; list-style:none; margin:0; padding:10px 0;
+        background:#fff; border:1px solid #EDE3F7; border-radius:8px;
+        box-shadow:0 12px 28px rgba(22,15,26,.12);
+        opacity:0; visibility:hidden; pointer-events:none;
+        transition:opacity .15s ease, transform .15s ease, visibility .15s;
+        z-index:1000;
+    }
+    .desktopMenu .submenu li{ margin:0; }
+    .desktopMenu .submenu a{
+        display:block; padding:10px 16px; font-size:14px; font-weight:400;
+        text-transform:none; white-space:nowrap; color:#160F1A;
+    }
+    .desktopMenu .submenu a:hover{ background:#F5D4E2; }
+
+    .has-submenu.open .submenu{
+        opacity:1; visibility:visible; pointer-events:auto;
+        transform:translateX(-50%) translateY(0);
+    }
+    .has-submenu.open .menu-caret{ transform:rotate(180deg); }
+}
+/* ==== /ПОПАП >1300 ==== */
+/* ==== Мобильный аккордеон "Услуги" в бургере (<=1300px) ==== */
+@media (max-width: 1300px) {
+    .menu #horizontal-multilevel-menu ul { list-style:none; }
+
+    .m-has-sub { position: relative; }
+
+    .m-toggle{
+        background: none; border: 0; padding: 0;
+        font: inherit; text-transform: uppercase; font-weight: 700;
+        display: inline-flex; align-items: center; gap: 8px;
+        cursor: pointer; color: #160F1A;
+    }
+
+    .m-caret{
+        width:0; height:0; border:6px solid transparent;
+        border-top-color:#160F1A; transform: translateY(2px);
+        transition: transform .15s ease;
+    }
+
+    .m-has-sub .m-sub{
+        margin: 12px 0 0 0; padding: 8px 0 0 0;
+        list-style: none;
+        border-top: 1px solid #EDE3F7;
+        display: none;
+
+        /* аккуратное скрытие/раскрытие */
+        max-height: 0; overflow: hidden;
+        transition: max-height .2s ease;
+    }
+    .m-has-sub.open .m-sub{
+        display: block;
+    }
+
+    .m-sub li a{
+        display:block; padding: 10px 0;
+        text-transform: none; font-weight: 400;
+        color:#160F1A; text-decoration: none;
+    }
+
+    .m-has-sub.open .m-sub{ max-height: 240px; } /* хватает для 3-х пунктов */
+    .m-has-sub.open .m-caret{ transform: rotate(180deg); }
+}
+/* ==== /моб. аккордеон ==== */
+
+/* =========================
+   Footer: выпадающее "Услуги"
+   ========================= */
+
+/* общий вид триггера – как ссылка из футера */
+.footer-menu .f-has-sub { position: relative; }
+.footer-menu .f-toggle{
+    background: none; border: 0; padding: 0;
+    font: inherit; text-transform: inherit; font-weight: 700;
+    letter-spacing: .04em; color: #FAF5FF; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+}
+.footer-menu .f-toggle:focus { outline: none; }
+
+/* маленькая стрелочка */
+.footer-menu .f-caret{
+    width:0; height:0; border:5px solid transparent;
+    border-top-color:#FAF5FF; transform: translateY(2px);
+    transition: transform .15s ease;
+}
+.footer-menu .f-sub{
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* плавно на iOS */
+}
+
+/* -------- Десктоп: попап ---------- */
+@media (min-width: 993px){
+    .footer-menu .f-sub{
+        position: absolute;
+        left: 0; top: calc(100% + 12px);   /* выпадает вниз */
+        min-width: 260px;
+        list-style: none; margin: 0; padding: 10px 0;
+        background: #5F2EA5;               /* тёмно-фиолетовый под фон футера */
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: 8px;
+        box-shadow: 0 12px 28px rgba(0,0,0,.25);
+        opacity: 0; visibility: hidden; pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity .15s ease, transform .15s ease, visibility .15s;
+        z-index: 5;
+    }
+    .footer-menu .f-sub li { margin: 0; }
+    .footer-menu .f-sub a{
+        display: block; padding: 10px 16px;
+        color: #FAF5FF; text-transform: none; font-weight: 400;
+        text-decoration: none; white-space: nowrap;
+    }
+    .footer-menu .f-sub a:hover{ background: rgba(255,255,255,.08); }
+
+    .footer-menu .f-has-sub.open .f-sub{
+        opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+    }
+    .footer-menu .f-has-sub.open .f-caret{ transform: rotate(180deg); }
+}
+
+/* -------- Планшет/мобайл: аккордеон ---------- */
+@media (max-width: 992px){
+    /* меню у тебя уже переносится в столбец — делаем раскрытие списком */
+    .footer-menu .f-sub{
+        list-style: none; margin: 8px 0 0; padding: 8px 0 0;
+        border-top: 1px solid rgba(255,255,255,.25);
+        display: none;
+    }
+    .footer-menu .f-sub a{
+        display: block; padding: 8px 0;
+        color: #FAF5FF; text-transform: none; font-weight: 400;
+        text-decoration: none;
+    }
+    .footer-menu .f-has-sub.open .f-sub{ display: block; }
+    .footer-menu .f-has-sub.open .f-caret{ transform: rotate(180deg); }
+}
+
+.footer-menu .f-sub::-webkit-scrollbar{ width: 8px; }
+.footer-menu .f-sub::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,.25);
+    border-radius: 6px;
+}
+.f-sub{
+    max-height: 130px;
+}

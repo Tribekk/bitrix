@@ -1,0 +1,562 @@
+@font-face {
+    font-family: 'Finlandica';
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Finlandica Bold'), /* проверка наличия шрифта в ОС клиента */ url('local/templates/books/fonts/Finlandica-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Finlandica';
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Finlandica Regular'), /* проверка наличия шрифта в ОС клиента */ url('local/templates/books/fonts/Finlandica-Regular.ttf');
+}
+
+.header-info {
+    display: none;
+}
+
+.header-back {
+    display: none;
+}
+*{
+    font-family: Finlandica, serif;
+}
+
+.header-top {
+    height: 160px;
+}
+
+@media (max-width: 1240px) {
+    .header-top {
+        height: 80px;
+    }
+}
+
+section:first-of-type:not(.form-section){
+    padding: 40px 350px;
+}
+
+section{
+    padding: 40px 64px;
+}
+
+div.page{
+    padding: 0 64px;
+}
+
+@media (max-width: 1240px) {
+    section{
+        padding: 32px 16px;
+    }
+    section:first-of-type:not(.form-section){
+        padding: 32px 40px;
+    }
+    div.page{
+        padding: 32px 16px;
+    }
+}
+@media (max-width: 391px){
+    section:first-of-type:not(.form-section){
+        padding: 24px 16px;
+    }
+    section{
+        padding: 24px 4px;
+    }
+}
+.head_container{
+    padding: 0 151px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.main-consult{
+    margin: 0;
+}
+.head_container h1{
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 110px;
+    text-transform: uppercase;
+}
+
+.head_container h2{
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+@media (max-width: 1240px) {
+    .head_container h1{
+        font-size: 48px;
+        margin-bottom: 32px;
+        margin-top: 0;
+    }
+    .head_container h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 520px){
+        .head_container{
+            padding: 0;
+        }
+    .head_container h1{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .head_container h2{
+        font-size: 18px;
+    }
+}
+
+.main-consult-item{
+    background: url("/uslugi-avto-product/src/img.png") no-repeat;
+    background-size: cover;
+}
+
+.one-c-services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.one-c-services > div {
+    background: #EDE3F7;
+    flex: 1 1 40%; /* <- вот тут! 320px — минимальная ширина блока */
+    min-width: 256px; /* <- минимально сколько можно */
+    max-width: 100%; /* <- не ограничиваем сверху */
+    height: auto;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(36, 43, 66, 0.06);
+    transition: background 0.2s;
+}
+
+.one-c-services > div.last-item {
+    background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
+}
+
+.service-title {
+    font-family: Finlandica, serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.service-desc {
+    font-family: Finlandica, regular, cursive;
+    font-size: 20px;
+    color: #160F1A;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        margin: 32px 0;
+        padding: 40px 24px;
+    }
+    .one-c-services {
+        gap: 16px;
+    }
+    .one-c-optimize h3 {
+        font-size: 40px;
+        margin-bottom: 32px;
+        padding-left: 0;
+    }
+
+    .one-c-services > div {
+        flex: 1 1 464px;
+        min-width: 260px;
+        border-radius: 8px;
+        padding: 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .one .service-title {
+        font-size: 28px;
+    }
+
+    .one .service-desc {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .one-c-optimize h3 {
+        font-size: 28px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-desc {
+        font-size: 20px;
+    }
+}
+
+/* Сетка карточек */
+.one-c-optimize h3{
+    width: 100%;
+    text-align: left;
+    padding-left: 253px;
+    font-size: 48px;
+    font-family: Finlandica, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+.one-c-services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Карточка */
+.one-c-services .service-card{
+    background:#EDE3F7;
+    border-radius:8px;
+    padding:40px;
+    box-shadow:0 2px 12px rgba(36,43,66,.06);
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    gap:24px;
+    min-height:322px;
+    justify-content: space-between;
+}
+.one-c-services .service-card.accent{
+    background: linear-gradient(96deg,#EDE3F7 0%, #F5D4E2 100%);
+}
+
+/* Заголовок карточки */
+.service-title{
+    font-family: Finlandica, serif;
+    font-weight:700;
+    font-size:28px;
+    line-height:1.2;
+    color:#19171A;
+}
+
+/* Список внутри карточки */
+.service-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.service-list li{
+    position:relative;
+    background:#fff;
+    border-radius:6px;
+    padding:12px;
+    font-family: Finlandica, serif;
+    font-weight:400;
+    font-size:20px;
+    color:#19171A;
+    line-height:1.25;
+}
+.service-card.accent .service-list li{
+    /* на градиентной карточке — лёгкая прозрачность как в макете */
+    background: rgba(255,255,255,.92);
+}
+@media (max-width: 1300px){
+    .one-c-services{ grid-template-columns: repeat(2, 1fr); gap:20px; }
+}
+/* Адаптивы */
+@media (max-width: 1024px){
+    .one-c-optimize h3 {
+        font-size: 40px;
+        margin-bottom: 32px;
+        padding-left: 0;
+    }
+    .one-c-services{ grid-template-columns: repeat(2, 1fr); gap:20px; }
+    .service-title{ font-size:24px; }
+    .service-list li{ font-size:14px; text-transform: uppercase; font-weight: bold }
+    .service-list li::before{ left:12px; }
+    .one-c-services .service-card{
+        padding: 24px;
+    }
+}
+
+@media (max-width: 760px){
+    .one-c-services{ grid-template-columns: 1fr; gap:16px; }
+    .service-title{ font-size:24px; }
+    .service-list li{ font-size:14px; }
+}
+
+@media (max-width: 560px) {
+    .one-c-optimize h3 {
+        font-size: 28px;
+    }
+}
+
+.form-section{
+    display:grid;
+    grid-template-columns: 1fr 584px;
+    column-gap:64px;
+    background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
+    border-radius:10px;
+    padding:56px 60px;
+    box-sizing:border-box;
+    font-family: Finlandica, sans-serif;
+    align-items:start;              /* <— левый блок прижат вверх */
+}
+
+/* Левый объединённый блок */
+.form-left{
+    padding-left:170px;             /* как в макете */
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width: 886px;
+}
+.form-left h3{
+    margin:0;
+    font-weight:600;
+    font-size:48px;
+    line-height:1.05;
+    text-transform:uppercase;
+    color:#19171A;
+}
+.form-left .form-desc{
+    margin:0;
+    font-size:24px;
+    line-height:1.45;
+    color:#19171A;
+}
+
+/* Правая колонка — форма (как делали) */
+.form{
+    width:584px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content:start;
+}
+.form input:not([type="checkbox"]),
+.form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    height: 46px;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+    color: #19171A;
+    box-sizing: border-box;
+    outline: none;
+}
+input::placeholder, textarea::placeholder{
+    font-family: Finlandica, sans-serif;
+    font-size: 20px;
+}
+.field-fio{ grid-column:1; }
+.field-company{ grid-column:2; }
+.field-position{ grid-column:1; }
+.field-phone{ grid-column:2; }
+.form textarea{ grid-column:1 / -1; min-height:110px; resize:vertical; }
+.page ul li{
+    font-size: 20px;
+    line-height: 1.4;
+}
+.form-policy{
+    grid-column:1 / -1;
+    display:grid; grid-template-columns:18px 1fr;
+    align-items:start; gap:10px; font-size:14px; color:#19171A;
+}
+.form .form-policy input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin-top: 2px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #fff;
+    border: 1.5px solid #A78BFA;
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
+}
+.form .form-policy input[type="checkbox"]:checked{
+    background: #6C2DB5;
+    border-color: #6C2DB5;
+}
+.form .form-policy input[type="checkbox"]:checked::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5l3 3 7-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px 10px no-repeat;
+}
+.form-policy a{ color:#6C2DB5; text-decoration:none; }
+
+.form-btn{
+    grid-column:1 / -1; height:46px; border:0; border-radius:6px;
+    background:#6C2DB5; color:#fff; font-weight:700; font-size:14px;
+    text-transform:uppercase; letter-spacing:.02em; cursor:pointer;
+    transition:background .15s ease;
+}
+.form-btn:hover{ background:#57239a; }
+@media (max-width: 1500px) {
+    .form-left{
+        padding: 0;
+    }
+}
+@media (max-width: 1360px) {
+    /* 1 колонка: текст сверху, форма ниже */
+    .form-section{
+        grid-template-columns: 1fr;      /* было: 1fr 520/584px */
+        grid-template-rows: auto auto;   /* текст, затем форма */
+        row-gap: 24px;
+        column-gap: 0;
+        padding: 40px 32px;
+        align-items: start;
+    }
+
+    /* верхний блок текста */
+    .form-left{
+        grid-column: 1;
+        gap: 0;
+        padding-left: 0;                 /* в макете отступов слева нет */
+        max-width: 100%;
+    }
+    body  div.page  section  div  div  ul{
+        margin: 0;
+    }
+    .form-left h3{
+        font-size: 40px;                 /* как на 1024 */
+        margin-bottom: 32px;
+    }
+    .form-left .form-desc{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* форма — под текстом, на всю ширину контейнера */
+    .form{
+        grid-column: 1;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr 1fr;  /* две колонки полей */
+        gap: 20px;
+    }
+
+    .form input:not([type="checkbox"]),
+    .form textarea{
+        height: 44px;
+        font-size: 18px;
+        padding: 16px;
+    }
+    input::placeholder,
+    textarea::placeholder{ font-size: 16px; }
+
+    /* раскладка полей 1в1 */
+    .field-fio{ grid-column: 1; }
+    .field-company{ grid-column: 2; }
+    .field-position{ grid-column: 1; }
+    .field-phone{ grid-column: 2; }
+
+    .form textarea{
+        grid-column: 1 / -1;
+        min-height: 100px;
+    }
+
+    .form-policy{
+        grid-column: 1 / -1;
+        grid-template-columns: 18px 1fr;
+        gap: 10px;
+        font-size: 18px;
+    }
+    .form .form-policy input[type="checkbox"]{
+        width: 16px; height: 16px; margin-top: 2px; padding: 0;
+    }
+
+    .form-btn{
+        grid-column: 1 / -1;
+        height: 46px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-section{
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+        row-gap: 16px;
+    }
+    .page ul li{
+        font-size: 18px;
+    }
+
+    .form-left{
+        padding-left: 0;
+    }
+    .form-left h3{
+        font-size: 28px;
+    }
+    .form-left .form-desc{
+        font-size: 18px;
+    }
+
+    .form{
+        grid-template-columns: 1fr; /* все поля в одну колонку */
+        gap: 16px;
+    }
+
+    .form input:not([type="checkbox"]),
+    .form textarea{
+        height: 44px;
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    input::placeholder,
+    textarea::placeholder{
+        font-size: 16px;
+    }
+
+    /* каждое поле теперь занимает всю ширину */
+    .field-fio,
+    .field-company,
+    .field-position,
+    .field-phone,
+    .form textarea {
+        grid-column: 1;
+    }
+
+    .form-policy{
+        font-size: 16px;
+        grid-template-columns: 16px 1fr;
+        gap: 8px;
+    }
+    .form .form-policy input[type="checkbox"]{
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+    }
+
+    .form-btn{
+        height: 42px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 520px) {
+    section{
+        padding: 12px 16px;
+        margin: 0;
+    }
+}
