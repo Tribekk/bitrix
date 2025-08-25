@@ -87,7 +87,7 @@
                         <div class="logo"><a href="/"><img src="/local/templates/books/images/new_img/logo.svg" alt=""></a></div>
                         <div class="desktopMenu">
                             <div>
-                                <a href="#">Решения 1С</a>
+                                <a href="/uslugi-i-avtomatizacia/">Решения 1С</a>
                             </div>
                             <div class="has-submenu" id="menu-services">
                                 <button type="button" class="menu-toggle" aria-haspopup="true" aria-expanded="false">
@@ -120,7 +120,7 @@
                             <div class="menu">
                                 <div id="horizontal-multilevel-menu">
                                     <ul>
-                                        <li><a href="#">Решения 1С</a></li>
+                                        <li><a href="/uslugi-i-avtomatizacia/">Решения 1С</a></li>
                                         <li class="m-has-sub">
                                             <button type="button" class="m-toggle" aria-expanded="false">
                                                 Услуги

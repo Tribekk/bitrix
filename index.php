@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Главная страница");
     <div class="container">
         <div class="main-solutions">
             <div class="main-solutions-item main-solutions-item-wide">
-                <a href="#">
+                <a href="/uslugi-i-avtomatizacia/">
                     <div class="main-solutions-title">Решения и продукты 1С</div>
                     <div class="main-solutions-right">
                         <div class="main-solutions-text">Учитываем особенности бизнеса и ИТ-инфраструктуры. Обеспечиваем сервисную поддержку и гарантию</div>
@@ -24,25 +24,25 @@ $APPLICATION->SetTitle("Главная страница");
                 </a>
             </div>
             <div class="main-solutions-item">
-                <a href="#">
+                <a href="/uslugi-montazh/">
                     <div class="main-solutions-title">Монтаж<br>слаботочных&nbsp;систем</div>
                     <div class="main-solutions-btn"><span>Узнать подробнее</span></div>
                 </a>
             </div>
             <div class="main-solutions-item">
-                <a href="#">
+                <a href="/uslugi-proektirovanie/">
                     <div class="main-solutions-title">Проектирование слаботочных&nbsp;систем</div>
                     <div class="main-solutions-btn"><span>Узнать подробнее</span></div>
                 </a>
             </div>
             <div class="main-solutions-item">
-                <a href="#">
+                <a href="/uslugi-ekspertiza/">
                     <div class="main-solutions-title">Экспертиза в построении&nbsp;ИТ-инфраструктуры</div>
                     <div class="main-solutions-btn"><span>Узнать подробнее</span></div>
                 </a>
             </div>
             <div class="main-solutions-item">
-                <a href="#">
+                <a href="/uslugi-service-support/">
                     <div class="main-solutions-title">Сервисная<br>поддержка</div>
                     <div class="main-solutions-btn"><span>Узнать подробнее</span></div>
                 </a>
