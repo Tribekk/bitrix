@@ -59,7 +59,7 @@ section{
         padding: 1px 0 0 4px;
     }
     section{
-        padding: 24px 4px;
+        padding: 24px 12px;
     }
 }
 
@@ -242,6 +242,7 @@ section.news{
 
 /* Лента */
 .cases-track{
+    max-width: 98vw;
     display:flex;
     gap:var(--gap);
     list-style:none;

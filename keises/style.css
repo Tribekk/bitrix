@@ -168,11 +168,7 @@ section{
 }
 @media (max-width: 1024px){
     .case{
-        background: #EDE3F7;
         padding: 24px;
-    }
-    .case--featured{
-        background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
     }
     .case__badge{
         font-size: 12px;

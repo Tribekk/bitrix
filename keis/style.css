@@ -242,6 +242,7 @@ section.padding{
 
 /* Лента */
 .cases-track{
+    max-width: 98vw;
     display:flex;
     gap:var(--gap);
     list-style:none;

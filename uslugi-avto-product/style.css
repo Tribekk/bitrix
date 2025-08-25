@@ -192,6 +192,15 @@ div.page{
 }
 
 @media screen and (max-width: 560px) {
+    .one-c-services > div{
+        padding: 24px;
+    }
+    .one .service-title{
+        font-size: 20px;
+    }
+    .one .service-desc{
+        font-size: 16px;
+    }
     .one-c-optimize h3 {
         font-size: 28px;
     }
@@ -218,7 +227,7 @@ div.page{
 }
 .one-c-services{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -236,7 +245,8 @@ div.page{
     justify-content: space-between;
 }
 .one-c-services .service-card.accent{
-    background: linear-gradient(96deg,#EDE3F7 0%, #F5D4E2 100%);
+    background: linear-gradient(98.08deg, #F5D4E2 0%, #EDE3F7 100%);
+
 }
 
 /* Заголовок карточки */
@@ -304,7 +314,6 @@ div.page{
 }
 
 .form-section{
-    margin: 48px;
     display:grid;
     grid-template-columns: 1fr 584px;
     column-gap:64px;
