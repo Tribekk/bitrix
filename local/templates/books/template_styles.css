@@ -1007,6 +1007,7 @@ a {
     .main-reasons-tall img {
         display: block;
         border-radius: 8px;
+        width: 100%;
     }
     .footer {
         margin: 36px 4px 4px;
@@ -1137,6 +1138,8 @@ a {
     }
     .main-consult-item img {
         display: block;
+        object-fit: cover;
+        width: 100%;
     }
     .main-reasons {
         margin-top: 48px;

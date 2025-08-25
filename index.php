@@ -51,7 +51,7 @@ $APPLICATION->SetTitle("Главная страница");
 
         <div class="main-consult">
             <div class="main-consult-item">
-                <img src="/local/templates/books/images/new_img/consult.jpg">
+                <img src="/uslugi-avto-product/src/img.png">
             </div>
             <div class="main-consult-item-wide">
                 <div class="main-consult-item-badge">Давайте знакомиться</div>
@@ -76,7 +76,7 @@ $APPLICATION->SetTitle("Главная страница");
                     </div>
                 </div>
                 <div class="main-reasons-item main-reasons-tall">
-                    <img src="/local/templates/books/images/new_img/reasons-back2.jpg">
+                    <img src="/local/templates/books/images/new_img/reasons-back.jpg">
                 </div>
                 <div class="main-reasons-item">
                     <div class="main-reasons-item-title-block">
