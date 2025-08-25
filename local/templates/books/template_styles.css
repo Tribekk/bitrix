@@ -18,14 +18,16 @@
 
 body {
     background-color: #FAF5FF;
+    max-width: 1920px;
     min-width: 360px;
-    margin: 0;
+    margin: auto;
     -webkit-text-size-adjust: none;
 }
 .header-top img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 * {
     box-sizing: border-box;
@@ -64,6 +66,7 @@ body {
     margin: 0 auto;
 }
 .container {
+    max-width: 1920px;
     padding: 48px 48px 0;
 }
 .container.container-notop {
@@ -1421,4 +1424,162 @@ a {
 }
 .f-sub{
     max-height: 130px;
+}
+
+/* ===== MODAL ===== */
+.contact-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;                 /* .open включит flex */
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.contact-modal.open{ display: flex; }
+
+.contact-modal__backdrop{
+    position: absolute;
+    inset: 0;
+    background: rgba(22,15,26,.55);
+    backdrop-filter: blur(2px);
+}
+
+.contact-modal__dialog{
+    position: relative;
+    width: 800px;                 /* desktop макет 800px */
+    max-width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(154deg,#EDE3F7 0%, #F5D4E2 100%);
+    box-shadow: 0 30px 80px rgba(22,15,26,.25);
+    padding: 28px;
+    font-family: Finlandica, sans-serif;
+    color: #160F1A;
+}
+
+.contact-modal__close{
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    color: #160F1A;
+    cursor: pointer;
+    opacity: .8;
+}
+.contact-modal__close:hover{ opacity: 1; }
+
+.contact-modal__title{
+    margin: 0 36px 12px 0;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+.contact-modal__subtitle{
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+/* форма */
+.contact-form__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;       /* 2 колонки — desktop/tablet */
+    gap: 12px 16px;
+    margin-bottom: 14px;
+}
+
+.field input,
+.field textarea{
+    width: 100%;
+    height: 44px;
+    border-radius: 6px;
+    border: none;
+    background: #fff;
+    padding: 12px 14px;
+    font: 16px/1.2 Finlandica, sans-serif;
+    color: #160F1A;
+    outline: none;
+}
+.field textarea{
+    min-height: 110px;
+    resize: vertical;
+}
+.field--wide{ grid-column: 1 / -1; }
+
+.field input::placeholder,
+.field textarea::placeholder{
+    color: #8E8792;
+}
+
+.consent{
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    align-items: start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+.consent input{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #A78BFA;
+    border-radius: 3px;
+    background: #fff;
+    margin-top: 2px;
+    position: relative;
+    cursor: pointer;
+}
+.consent input:checked{
+    background: #6C2DB5;
+    border-color: #6C2DB5;
+}
+.consent input:checked::after{
+    content:"";
+    position:absolute; inset:0;
+    background:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5l3 3 7-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px 10px no-repeat;
+}
+.consent a{ color:#6C2DB5; text-decoration:none; }
+
+.contact-form__submit{
+    display:block; width:100%; height:46px;
+    border:0; border-radius:6px; cursor:pointer;
+    background:#7639B2; color:#fff;
+    font-weight:700; font-size:14px; text-transform:uppercase;
+    transition:background .15s ease;
+}
+.contact-form__submit:hover{ background:#57239a; }
+
+/* tablet */
+@media (max-width: 1024px){
+    .contact-modal__dialog{ width: 680px; padding: 24px; }
+    .contact-modal__title{ font-size: 40px; }
+    .contact-modal__subtitle{ font-size: 20px; }
+    .contact-form__grid{ gap: 10px 14px; }
+    .field input, .field textarea{ height: 42px; font-size: 18px; }
+    .field textarea{ min-height: 100px; }
+}
+
+/* mobile */
+@media (max-width: 520px){
+    .contact-modal{ padding: 12px; }
+    .contact-modal__dialog{ width: 420px; padding: 20px; }
+    .contact-modal__title{ font-size: 28px; }
+    .contact-modal__subtitle{ font-size: 18px; }
+
+    .contact-form__grid{
+        grid-template-columns: 1fr; /* одна колонка */
+        gap: 10px;
+    }
+    .field--wide{ grid-column: auto; }
+    .field textarea{ min-height: 96px; }
+
+    .consent{ font-size: 16px; gap: 8px; }
 }

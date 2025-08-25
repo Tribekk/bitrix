@@ -48,11 +48,116 @@
     </div>
 </div>
 
+    <!-- Модалка «Оставьте заявку» -->
+    <div class="contact-modal" id="contactModal" aria-hidden="true">
+        <div class="contact-modal__backdrop" data-close-modal></div>
 
+        <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+            <button class="contact-modal__close" type="button" title="Закрыть" aria-label="Закрыть" data-close-modal>×</button>
+
+            <h3 class="contact-modal__title" id="contactModalTitle">Оставьте заявку</h3>
+            <p class="contact-modal__subtitle">
+                В короткие сроки подготовим коммерческое предложение или проверим техническое задание
+            </p>
+
+            <form class="contact-form" action="#" method="post" novalidate>
+                <div class="contact-form__grid">
+                    <label class="field">
+                        <input type="text" name="fio" placeholder="ФИО" autocomplete="name" required>
+                    </label>
+
+                    <label class="field">
+                        <input type="text" name="company" placeholder="Название компании" autocomplete="organization">
+                    </label>
+
+                    <label class="field">
+                        <input type="text" name="position" placeholder="Должность" autocomplete="organization-title">
+                    </label>
+
+                    <label class="field">
+                        <input type="tel" name="phone" placeholder="+7 987 654 32 10" autocomplete="tel">
+                    </label>
+
+                    <label class="field field--wide">
+                        <textarea name="message" placeholder="Кратко расскажите о своей задаче"></textarea>
+                    </label>
+                </div>
+
+                <label class="consent">
+                    <input type="checkbox" required>
+                    <span>
+          Я даю свое согласие на обработку персональных данных в соответствии с
+          <a href="#" target="_blank" rel="noopener">Политикой оператора</a>
+          в отношении обработки персональных данных
+        </span>
+                </label>
+
+                <button type="submit" class="contact-form__submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script>
+        (function(){
+            const modal   = document.getElementById('contactModal');
+            if (!modal) return;
+            const dialog  = modal.querySelector('.contact-modal__dialog');
+            const openers = document.querySelectorAll('.header-btn a, .menu_btn a'); // обе кнопки
+            const closers = modal.querySelectorAll('[data-close-modal]');
+            const firstInput = modal.querySelector('input[name="fio"]');
+            let lastActive = null;
+
+            function openModal(e){
+                if (e) e.preventDefault();
+                lastActive = document.activeElement;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+                setTimeout(()=>firstInput && firstInput.focus(), 10);
+            }
+
+            function closeModal(){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+                lastActive && lastActive.focus();
+            }
+
+            openers.forEach(btn => btn.addEventListener('click', openModal));
+            closers.forEach(btn => btn.addEventListener('click', closeModal));
+
+            // клик по подложке
+            modal.addEventListener('click', (e)=>{
+                if (e.target.closest('.contact-modal__dialog')) return;
+                closeModal();
+            });
+
+            // ESC
+            document.addEventListener('keydown', (e)=>{
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+            });
+
+            // простая ловушка фокуса
+            modal.addEventListener('keydown', (e)=>{
+                if (e.key !== 'Tab') return;
+                const focusables = modal.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
+                const first = focusables[0];
+                const last  = focusables[focusables.length - 1];
+                if (e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+                else if (!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+            });
+        })();
+    </script>
 
 
 <script>
 $(document).on('click', '.hamburger', function () {
+    console.log(123);
     menu($(this));
 });
 
