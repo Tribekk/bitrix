@@ -59,7 +59,7 @@ $APPLICATION->SetTitle("Связаться с нами");
                     <textarea placeholder="Кратко расскажите о своей задаче"></textarea>
                     <div class="form-policy">
                         <input type="checkbox" id="policy" required>
-                        <label for="policy">Я даю свое согласие на обработку персональных данных в соответствии с
+                        <label for="policy" class="policy">Я даю свое согласие на обработку персональных данных в соответствии с
                             <a href="#">Политикой оператора</a> в отношении обработки персональных данных
                         </label>
                     </div>

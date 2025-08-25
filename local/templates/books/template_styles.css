@@ -694,6 +694,7 @@ a {
 }
 @media screen and (max-width: 1300px) {
     .menu {
+        overflow: hidden;
         display: block;
     }
     .logo img {

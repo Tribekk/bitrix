@@ -224,6 +224,7 @@ section{
 }
 
 .form-section{
+    margin: 48px;
     display:grid;
     grid-template-columns: 1fr 584px;
     column-gap:64px;
@@ -297,6 +298,14 @@ input::placeholder, textarea::placeholder{
     display:grid; grid-template-columns:18px 1fr;
     align-items:start; gap:10px; font-size:14px; color:#19171A;
 }
+.policy{
+    font-size: 20px;
+}
+@media (max-width: 1024px) {
+    .policy{
+        font-size: 16px;
+    }
+}
 .form .form-policy input[type="checkbox"]{
     -webkit-appearance: none;
     appearance: none;
@@ -326,11 +335,11 @@ input::placeholder, textarea::placeholder{
 
 .form-btn{
     grid-column:1 / -1; height:46px; border:0; border-radius:6px;
-    background:#6C2DB5; color:#fff; font-weight:700; font-size:14px;
+    background:#7639B2; color:#fff; font-weight:700; font-size:14px;
     text-transform:uppercase; letter-spacing:.02em; cursor:pointer;
     transition:background .15s ease;
 }
-.form-btn:hover{ background:#57239a; }
+.form-btn:hover{ background:#E14E6D; }
 @media (max-width: 1500px) {
     .form-left{
         padding: 0;
@@ -339,6 +348,7 @@ input::placeholder, textarea::placeholder{
 @media (max-width: 1360px) {
     /* 1 колонка: текст сверху, форма ниже */
     .form-section{
+        margin: 24px;
         grid-template-columns: 1fr;      /* было: 1fr 520/584px */
         grid-template-rows: auto auto;   /* текст, затем форма */
         row-gap: 24px;
@@ -417,6 +427,7 @@ input::placeholder, textarea::placeholder{
         margin-bottom: 24px;
     }
     .form-section{
+        margin: 12px;
         grid-template-columns: 1fr;
         padding: 40px 24px;
         row-gap: 0;
@@ -472,7 +483,7 @@ input::placeholder, textarea::placeholder{
     }
 
     .form-btn{
-        height: 42px;
+        height: 48px;
         font-size: 14px;
     }
 }

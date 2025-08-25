@@ -189,7 +189,7 @@ section {
 }
 
 .one-c-services > div.last-item {
-    background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
+    background: linear-gradient(98.08deg, #F5D4E2 0%, #EDE3F7 100%);
 }
 
 .service-title {
@@ -323,10 +323,6 @@ section {
     justify-content: space-between;
     /* плавная тень при ховере */
     transition: box-shadow .15s;
-}
-
-.step:hover {
-    box-shadow: 0 4px 32px rgba(70, 61, 109, 0.11);
 }
 
 /* Номер этапа */
@@ -598,7 +594,7 @@ section {
 }
 
 .cta-btn {
-    background: #6C2DB5;
+    background: #7639B2;
     color: #fff;
     font-family: Finlandica, serif;
     font-weight: 700;
@@ -612,7 +608,7 @@ section {
 }
 
 .cta-btn:hover {
-    background: #4f1f84;
+    background-color: #E14E6D;
 }
 
 @media (max-width: 1700px) {
@@ -1073,8 +1069,8 @@ section {
 
 .why-us li {
     font-family: Finlandica, serif;
-    background: transparent;
-    border: 2px solid rgba(124, 58, 237, 0.1); /* тонкая сиреневая рамка */
+    background: #FAF5FF;
+    border: 3px solid #EDE3F7; /* тонкая сиреневая рамка */
     border-radius: 8px;
     padding: 40px;
     text-align: left;
@@ -1167,6 +1163,7 @@ section.cases{
 
 /* Вьюпорт — горизонтальный скролл с подсмотром */
 .cases-viewport{
+    max-width: 98vw;
     --gap:24px;
     --spv:3;          /* 1920: 3 карточки */
     --peek:120px;     /* ширина подсмотра справа */
@@ -1267,6 +1264,7 @@ section.cases{
 
 /* Каркас 2 колонки */
 .form-section{
+    margin: 48px;
     display:grid;
     grid-template-columns: 1fr 584px;
     column-gap:64px;
@@ -1337,6 +1335,14 @@ input::placeholder, textarea::placeholder{
     display:grid; grid-template-columns:18px 1fr;
     align-items:start; gap:10px; font-size:14px; color:#19171A;
 }
+.policy{
+    font-size: 20px;
+}
+@media (max-width: 1024px) {
+    .policy{
+        font-size: 16px;
+    }
+}
 .form .form-policy input[type="checkbox"]{
     -webkit-appearance: none;
     appearance: none;
@@ -1370,11 +1376,12 @@ input::placeholder, textarea::placeholder{
     text-transform:uppercase; letter-spacing:.02em; cursor:pointer;
     transition:background .15s ease;
 }
-.form-btn:hover{ background:#57239a; }
+.form-btn:hover{ background:#E14E6D; }
 
 @media (max-width: 1360px) {
     /* 1 колонка: текст сверху, форма ниже */
     .form-section{
+        margin: 24px;
         grid-template-columns: 1fr;      /* было: 1fr 520/584px */
         grid-template-rows: auto auto;   /* текст, затем форма */
         row-gap: 24px;
@@ -1446,6 +1453,7 @@ input::placeholder, textarea::placeholder{
 
 @media (max-width: 500px) {
     .form-section{
+        margin: 12px;
         grid-template-columns: 1fr;
         padding: 40px 24px;
         row-gap: 16px;
@@ -1498,7 +1506,7 @@ input::placeholder, textarea::placeholder{
     }
 
     .form-btn{
-        height: 42px;
+        height: 48px;
         font-size: 14px;
     }
 }
