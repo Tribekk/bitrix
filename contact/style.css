@@ -146,7 +146,6 @@
     grid-column: 2;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(22, 15, 26, 0.08);
     background: #EEE;
     display: flex;
 }

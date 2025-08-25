@@ -606,3 +606,9 @@ input::placeholder, textarea::placeholder{
         padding: 24px 16px;
     }
 }
+
+@media (max-width: 500px) {
+    .news-body p{
+        margin: 16px 0 24px;
+    }
+}

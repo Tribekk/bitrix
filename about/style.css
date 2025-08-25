@@ -399,7 +399,7 @@ input::placeholder, textarea::placeholder{
 }
 
 .about-text{
-    padding: 117px 64px;
+    padding: 75px 64px;
     background: #EDE3F7;
     border-radius: 8px;
     display: flex;              /* чтобы текст внутри ровно вставал */
@@ -471,6 +471,9 @@ input::placeholder, textarea::placeholder{
     .about-text{
         padding: 24px;
     }
+    .about-image{
+        height: 320px;
+    }
 }
 
 /* Заголовок блока */
@@ -534,7 +537,7 @@ section.approach{
 
 /* Mobile — по одной карточке в колонку */
 @media (max-width: 710px){
-    .approach h3{ font-size: 40px; margin-bottom: 24px; }
+    .approach h3{ font-size: 28px; margin-bottom: 24px; }
     .approach-grid{ grid-template-columns: 1fr; gap: 16px; }
     .approach-card{ padding: 24px; gap: 24px }
     .approach-title{ font-size: 20px; }
