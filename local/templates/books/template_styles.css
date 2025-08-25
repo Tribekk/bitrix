@@ -301,7 +301,7 @@ a {
     height: 421px;
     background-color: #c3c3c3;
     overflow: hidden;
-    background: url(/local/templates/books/images/new_img/consult.jpg) center top no-repeat;
+    background: url(/uslugi-avto-product/src/img.png) center top no-repeat;
     background-size: cover;
 }
 .main-consult-item img {
