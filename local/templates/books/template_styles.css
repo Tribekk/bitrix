@@ -1289,12 +1289,13 @@ a {
     }
     .desktopMenu .submenu li{ margin:0; }
     .desktopMenu .submenu a{
-        display:block; padding:10px 16px; font-size:14px; font-weight:400;
+        display:block; padding:10px 16px; font-size:14px; font-weight:700;
         text-transform:none; white-space:nowrap; color:#160F1A;
     }
-    .desktopMenu .submenu a:hover{ background:#F5D4E2; }
 
     .has-submenu.open .submenu{
+        background: #EDE3F7;
+        border-radius: 8px;
         opacity:1; visibility:visible; pointer-events:auto;
         transform:translateX(-50%) translateY(0);
     }
@@ -1340,7 +1341,7 @@ a {
         color:#160F1A; text-decoration: none;
     }
 
-    .m-has-sub.open .m-sub{ max-height: 240px; } /* хватает для 3-х пунктов */
+    .m-has-sub.open .m-sub{ max-height: 290px; } /* хватает для 3-х пунктов */
     .m-has-sub.open .m-caret{ transform: rotate(180deg); }
 }
 /* ==== /моб. аккордеон ==== */

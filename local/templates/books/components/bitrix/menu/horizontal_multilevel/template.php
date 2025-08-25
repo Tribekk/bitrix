@@ -96,12 +96,10 @@
                                 </button>
 
                                 <ul class="submenu" role="menu">
-                                    <li role="none"><a role="menuitem" href="/uslugi-i-avtomatizacia/">Автоматизация</a></li>
-                                    <li role="none"><a role="menuitem" href="/uslugi-proektirovanie/">Проектирование</a></li>
-                                    <li role="none"><a role="menuitem" href="/uslugi-montazh/">Монтаж</a></li>
-                                    <li role="none"><a role="menuitem" href="/uslugi-ekspertiza/">Экспертиза</a></li>
-                                    <li role="none"><a role="menuitem" href="/uslugi-service-support/">Сервисная поддержка</a></li>
-                                    <li role="none"><a role="menuitem" href="/uslugi-avto-product/">Автоматизация продукта</a></li>
+                                    <li role="none"><a href="/uslugi-proektirovanie/">Проектирование слаботочных систем</a></li>
+                                    <li role="none"><a href="/uslugi-montazh/">Монтаж слаботочных систем</a></li>
+                                    <li role="none"><a href="/uslugi-ekspertiza/">Экспертиза в построении ИТ-инфраструктуры</a></li>
+                                    <li role="none"><a href="/uslugi-service-support/">Сервисная поддержка</a></li>
                                 </ul>
                             </div>
                             <div>
@@ -129,9 +127,10 @@
                                                 <span class="m-caret"></span>
                                             </button>
                                             <ul class="m-sub">
-                                                <li><a href="/uslugi-i-avtomatizacia/vnedrenie">Внедрение</a></li>
-                                                <li><a href="/uslugi-i-avtomatizacia/soprovozhdenie">Сопровождение</a></li>
-                                                <li><a href="/uslugi-i-avtomatizacia/konsultacii">Консультации</a></li>
+                                                <li><a href="/uslugi-proektirovanie/">Проектирование слаботочных систем</a></li>
+                                                <li><a href="/uslugi-montazh/">Монтаж слаботочных систем</a></li>
+                                                <li><a href="/uslugi-ekspertiza/">Экспертиза в построении ИТ-инфраструктуры</a></li>
+                                                <li><a href="/uslugi-service-support/">Сервисная поддержка</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="/keises/">Кейсы</a></li>

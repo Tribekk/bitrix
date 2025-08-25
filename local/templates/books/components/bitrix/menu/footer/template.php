@@ -29,12 +29,10 @@
                                 <span class="f-caret"></span>
                             </button>
                             <ul class="f-sub">
-                                <li><a href="/uslugi-i-avtomatizacia/">Автоматизация</a></li>
-                                <li><a href="/uslugi-proektirovanie/">Проектирование</a></li>
-                                <li><a href="/uslugi-montazh/">Монтаж</a></li>
-                                <li><a href="/uslugi-ekspertiza/">Экспертиза</a></li>
+                                <li><a href="/uslugi-proektirovanie/">Проектирование слаботочных систем</a></li>
+                                <li><a href="/uslugi-montazh/">Монтаж слаботочных систем</a></li>
+                                <li><a href="/uslugi-ekspertiza/">Экспертиза в построении ИТ-инфраструктуры</a></li>
                                 <li><a href="/uslugi-service-support/">Сервисная поддержка</a></li>
-                                <li><a href="/uslugi-avto-product/">Автоматизация продукта</a></li>
                             </ul>
                         </li>
                         <li><a href="/keises/">Кейсы</a></li>
@@ -157,7 +155,6 @@
 
 <script>
 $(document).on('click', '.hamburger', function () {
-    console.log(123);
     menu($(this));
 });
 
