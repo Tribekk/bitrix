@@ -137,7 +137,6 @@ div.page{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 2px 12px rgba(36, 43, 66, 0.06);
     transition: background 0.2s;
 }
 
