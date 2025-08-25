@@ -77,7 +77,7 @@ $APPLICATION->SetTitle("Главная страница");
                     <div class="main-consult-item-title">Бесплатная<br>30-минутная консультация</div>
                     <div class="main-consult-item-text">Получите разбор вашей задачи и рекомендации от эксперта.</div>
                 </div>
-                <div class="main-btn"><a href="#">Оставить заявку</a></div>
+                <div class="main-btn"><a class="js-open-contact">Оставить заявку</a></div>
             </div>
         </div>
     </section>

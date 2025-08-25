@@ -111,7 +111,7 @@
                         </div>
                         <div class="header-right">
                             <div class="header-email"><a href="mailto:info@fnserv.ru">info@fnserv.ru</a></div>
-                            <div class="header-btn"><a href="/contact/">Связаться с нами</a></div>
+                            <div class="header-btn"><a href="/contact/" class="js-open-contact">Связаться с нами</a></div>
                             <div class="hamburger">
                                 <span></span>
                                 <span></span>

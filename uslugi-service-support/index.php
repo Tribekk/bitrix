@@ -48,7 +48,7 @@ $APPLICATION->SetTitle("Главная страница");
                 <div class="cta-title">Обсудим, как можно сократить бюджет?</div>
                 <div class="cta-right">
                     <div class="cta-subtitle">Задайте вопрос, проверьте КП <br> или пригласите в тендер</div>
-                    <button class="cta-btn">Оставить заявку</button>
+                    <button class="cta-btn js-open-contact">Оставить заявку</button>
                 </div>
             </div>
         </section>

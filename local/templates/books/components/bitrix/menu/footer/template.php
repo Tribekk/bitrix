@@ -105,7 +105,7 @@
             const modal   = document.getElementById('contactModal');
             if (!modal) return;
             const dialog  = modal.querySelector('.contact-modal__dialog');
-            const openers = document.querySelectorAll('.header-btn a, .menu_btn a'); // обе кнопки
+            const openers = document.querySelectorAll('.js-open-contact'); // универсальный класс
             const closers = modal.querySelectorAll('[data-close-modal]');
             const firstInput = modal.querySelector('input[name="fio"]');
             let lastActive = null;
@@ -129,31 +129,19 @@
             openers.forEach(btn => btn.addEventListener('click', openModal));
             closers.forEach(btn => btn.addEventListener('click', closeModal));
 
-            // клик по подложке
             modal.addEventListener('click', (e)=>{
-                if (e.target.closest('.contact-modal__dialog')) return;
-                closeModal();
+                if (!e.target.closest('.contact-modal__dialog')) closeModal();
             });
 
-            // ESC
             document.addEventListener('keydown', (e)=>{
                 if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-            });
-
-            // простая ловушка фокуса
-            modal.addEventListener('keydown', (e)=>{
-                if (e.key !== 'Tab') return;
-                const focusables = modal.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
-                const first = focusables[0];
-                const last  = focusables[focusables.length - 1];
-                if (e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
-                else if (!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
             });
         })();
     </script>
 
 
-<script>
+
+    <script>
 $(document).on('click', '.hamburger', function () {
     menu($(this));
 });

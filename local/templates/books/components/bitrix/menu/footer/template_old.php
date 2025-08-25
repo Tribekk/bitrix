@@ -9,7 +9,7 @@
 					<img src="/local/templates/books/img/mainlogo.svg"/>
 				</a>
 				<a href='/contact'>
-					<div class="btn btn_blue">
+					<div class="js-open-contact">
 						 ОСТАВИТЬ ЗАЯВКУ
 					</div>
 				</a>
