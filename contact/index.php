@@ -36,8 +36,7 @@ $APPLICATION->SetTitle("Связаться с нами");
 
                 <!-- MAP (справа, на высоту трёх карточек) -->
                 <div class="contact-map">
-                    <!-- Вставь свой src из конструктора карт -->
-                    <img src="/contact/src/map.png" alt="">
+                    <div id="ymap" class="map"></div>
                 </div>
             </div>
         </section>
@@ -68,4 +67,28 @@ $APPLICATION->SetTitle("Связаться с нами");
             </div>
         </section>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(function () {
+            // координаты офиса (пример: Москва Сетунь)
+            const center = [55.726320, 37.399399];
+
+            const map = new ymaps.Map('ymap', {
+                center, zoom: 17, controls: ['zoomControl', 'geolocationControl']
+            }, {
+                suppressMapOpenBlock: true
+            });
+
+            // метка
+            const placemark = new ymaps.Placemark(center, {
+                balloonContent: 'БЦ «Гранд Сетунь Плаза», ул. Горбунова, 2 строение 3'
+            }, {
+                preset: 'islands#blackDotIcon' // ч/б иконка
+            });
+
+            map.geoObjects.add(placemark);
+            map.behaviors.enable('drag');     // интерактив
+            map.behaviors.enable('scrollZoom');
+        });
+    </script>
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
