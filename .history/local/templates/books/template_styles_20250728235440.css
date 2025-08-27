@@ -151,6 +151,7 @@ a {
 }
 .header-btn a:hover {
     background-color: #E14E6D;
+    cursor: pointer;
 }
 .header-info {
     position: relative;
@@ -354,6 +355,7 @@ a {
 }
 .main-btn a:hover {
     background-color: #E14E6D;
+    cursor: pointer;
 }
 .main-reasons {
     margin-top: 138px;
@@ -811,6 +813,7 @@ a {
     }
     .menu_btn a:hover {
         background-color: #E14E6D;
+        cursor: pointer;
     }
     img.header-back {
         max-width: none;

@@ -56,7 +56,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 130px 25vw 48px 301px;
+    padding: 130px 480px 48px 301px;
     line-height: 1;
 }
 
@@ -178,7 +178,7 @@ section {
     background: #EDE3F7;
     flex: 1 1 30vw; /* <- вот тут! 320px — минимальная ширина блока */
     min-width: 260px; /* <- минимально сколько можно */
-    max-width: 100%; /* <- не ограничиваем сверху */
+    max-width: 584px; /* <- не ограничиваем сверху */
     height: 182px;
     border-radius: 8px;
     padding: 40px;
@@ -188,7 +188,7 @@ section {
 }
 
 .one-c-services > div.last-item {
-    background: linear-gradient(98.08deg, #F5D4E2 0%, #EDE3F7 100%);
+    background: linear-gradient(88.97deg, #EDE3F7 0%, #F5D4E2 100%);
 }
 
 .service-title {
@@ -308,7 +308,7 @@ section {
 
 /* Общие стили карточек */
 .step {
-    background: #fff;
+    background: #FAF5FF;
     border: 3px solid #EDE3F7;
     border-radius: 8px;
     padding: 40px;
@@ -606,6 +606,7 @@ section {
 
 .cta-btn:hover {
     background-color: #E14E6D;
+    cursor: pointer;
 }
 
 @media (max-width: 1700px) {
@@ -1083,7 +1084,7 @@ section {
     font-family: Finlandica, serif;
     font-size: 64px;
     font-weight: 700;
-    color: rgba(124, 58, 237, 0.1); /* полупрозрачный номер */
+    color: #EDE3F7; /* полупрозрачный номер */
     display: block;
 }
 

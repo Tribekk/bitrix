@@ -294,7 +294,7 @@ section {
 
 /* Общие стили карточек */
 .step {
-    background: #fff;
+    background: #FAF5FF;
     border: 3px solid #EDE3F7;
     border-radius: 8px;
     padding: 40px;
@@ -592,6 +592,7 @@ section {
 
 .cta-btn:hover {
     background-color: #E14E6D;
+    cursor: pointer;
 }
 
 @media (max-width: 1700px) {
@@ -1069,7 +1070,7 @@ section {
     font-family: Finlandica, serif;
     font-size: 64px;
     font-weight: 700;
-    color: rgba(124, 58, 237, 0.1); /* полупрозрачный номер */
+    color: #EDE3F7; /* полупрозрачный номер */
     display: block;
 }
 
