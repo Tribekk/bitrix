@@ -176,7 +176,7 @@ section {
 
 .one-c-services > div {
     background: #EDE3F7;
-    flex: 1 1 30vw; /* <- вот тут! 320px — минимальная ширина блока */
+    flex: 1 1 30%; /* <- вот тут! 320px — минимальная ширина блока */
     min-width: 260px; /* <- минимально сколько можно */
     max-width: 584px; /* <- не ограничиваем сверху */
     height: 182px;
@@ -186,6 +186,11 @@ section {
     justify-content: space-between;
     flex-direction: column;
     transition: background 0.2s;
+}
+@media (min-width: 1921px) {
+    .one-c-services > div{
+        flex: 1 1 30vw;
+    }
 }
 
 .one-c-services > div.last-item {
@@ -204,7 +209,7 @@ section {
     color: #160F1A;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1270px) {
     section {
         margin: 32px 0;
         padding: 24px;
