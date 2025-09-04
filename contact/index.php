@@ -83,7 +83,7 @@ $APPLICATION->SetTitle("Связаться с нами");
             const placemark = new ymaps.Placemark(center, {
                 balloonContent: 'БЦ «Гранд Сетунь Плаза», ул. Горбунова, 2 строение 3'
             }, {
-                preset: 'islands#blackDotIcon' // ч/б иконка
+                preset: 'islands#blackDotIcon',
             });
 
             map.geoObjects.add(placemark);

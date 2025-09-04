@@ -25,6 +25,10 @@
 .header-top {
     height: 160px;
 }
+body{
+    max-width: 1920px;
+    margin: 0 auto;
+}
 
 @media screen and (max-width: 1300px) {
     .header-top {
@@ -184,7 +188,6 @@
 }
 
 .form-section{
-    margin: 48px;
     display:grid;
     grid-template-columns: 1fr 584px;
     column-gap:64px;
@@ -297,8 +300,9 @@ input::placeholder, textarea::placeholder{
 .form-policy a{ color:#6C2DB5; text-decoration:none; }
 
 .form-btn{
-    grid-column:1 / -1; height:46px; border:0; border-radius:6px;
-    background:#7639B2; color:#fff; font-weight:700; font-size:14px;
+    font-family: Finlandica, serif;
+    grid-column:1 / -1; height:56px; border:0; border-radius:6px;
+    background:#7639B2; color:#fff; font-weight:700; font-size:16px;
     text-transform:uppercase; letter-spacing:.02em; cursor:pointer;
     transition:background .15s ease;
 }
@@ -311,7 +315,6 @@ input::placeholder, textarea::placeholder{
 @media (max-width: 1360px) {
     /* 1 колонка: текст сверху, форма ниже */
     .form-section{
-        margin: 24px;
         grid-template-columns: 1fr;      /* было: 1fr 520/584px */
         grid-template-rows: auto auto;   /* текст, затем форма */
         row-gap: 24px;
@@ -390,7 +393,6 @@ input::placeholder, textarea::placeholder{
         margin-bottom: 24px;
     }
     .form-section{
-        margin: 12px;
         grid-template-columns: 1fr;
         padding: 40px 24px;
         row-gap: 0;

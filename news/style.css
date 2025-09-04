@@ -29,6 +29,11 @@
     height: 160px;
 }
 
+body{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 @media (max-width: 1240px) {
     .header-top {
         height: 80px;
@@ -153,7 +158,7 @@ section.news{
     padding:40px;
     margin: 24px 0;
 }
-.news-quote-text{
+.news-body p.news-quote-text{
     font-size:24px;
     line-height:1.2;
     margin:0 0 24px 0;

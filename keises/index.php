@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Главная страница");
         <section class="cases">
             <div class="cases__grid">
                 <!-- 1 -->
-                <article class="case">
+                <article onclick="window.location.href='/keis/'" class="case">
                     <span class="case__badge">Сервисная поддержка</span>
                     <div>
                         <h3 class="case__title">Название кейса</h3>
@@ -31,7 +31,7 @@ $APPLICATION->SetTitle("Главная страница");
                 </article>
 
                 <!-- 2 -->
-                <article class="case">
+                <article onclick="window.location.href='/keis/'" class="case">
                     <span class="case__badge">Монтаж</span>
                     <div>
                         <h3 class="case__title">Название кейса</h3>
@@ -40,7 +40,7 @@ $APPLICATION->SetTitle("Главная страница");
                 </article>
 
                 <!-- 3 — фичерная, тянется на 2 ряда -->
-                <article class="case case--featured">
+                <article onclick="window.location.href='/keis/'" class="case case--featured">
                     <span class="case__badge">1C решения</span>
                     <div>
                         <h3 class="case__title">Название кейса</h3>
@@ -49,7 +49,7 @@ $APPLICATION->SetTitle("Главная страница");
                 </article>
 
                 <!-- 4 -->
-                <article class="case">
+                <article onclick="window.location.href='/keis/'" class="case">
                     <span class="case__badge">Проектирование</span>
                     <div>
                         <h3 class="case__title">Название кейса</h3>
@@ -58,7 +58,7 @@ $APPLICATION->SetTitle("Главная страница");
                 </article>
 
                 <!-- 5 -->
-                <article class="case">
+                <article onclick="window.location.href='/keis/'" class="case">
                     <span class="case__badge">ИТ-инфраструктура</span>
                     <div>
                         <h3 class="case__title">Название кейса</h3>
