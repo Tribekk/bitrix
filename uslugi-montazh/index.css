@@ -886,7 +886,7 @@ section {
 /* (по желанию) лёгкая адаптация */
 @media (max-width: 1700px) {
     .foresight .left {
-        padding: 80px 40px;
+        padding: 80px 10px;
     }
 }
 
