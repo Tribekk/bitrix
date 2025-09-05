@@ -56,8 +56,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 132px 501px 48px 301px;
+    padding: 132px 25vw 48px 301px;
     line-height: 1;
+}
+
+@media (min-width: 1921px) {
+    .page-header .text {
+        padding: 132px 501px 48px 301px;
+    }
 }
 
 .page-header .text h1 {

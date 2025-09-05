@@ -57,10 +57,14 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 48px 501px 48px 301px;
+    padding: 48px 25vw 48px 301px;
     line-height: 1;
 }
-
+@media (min-width: 1921px){
+    .page-header .text {
+        padding: 48px 501px 48px 301px;
+    }
+}
 .page-header .text h1 {
     text-transform: uppercase;
     margin: 43px 0 0 0;
@@ -882,8 +886,7 @@ section {
 /* (по желанию) лёгкая адаптация */
 @media (max-width: 1700px) {
     .foresight .left {
-
-        padding: 80px 10px;
+        padding: 80px 40px;
     }
 }
 
