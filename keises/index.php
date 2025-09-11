@@ -19,52 +19,58 @@ $APPLICATION->SetTitle("Главная страница");
             </div>
         </div>
 
+        <?php
+use Bitrix\Main\Loader;
+
+Loader::includeModule('iblock');
+
+$sections = \CIBlockSection::GetList(
+    ['SORT' => 'ASC'],
+    [
+        'IBLOCK_ID' => 10,
+        'DEPTH_LEVEL' => 1,
+        'ACTIVE' => 'Y',
+    ],
+    false,
+    ['ID', 'NAME']
+);
+
+$cases = [];
+while ($section = $sections->Fetch()) {
+    $element = \CIBlockElement::GetList(
+        ['ACTIVE_FROM' => 'DESC'],
+        [
+            'IBLOCK_ID' => 10,
+            'SECTION_ID' => $section['ID'],
+            'INCLUDE_SUBSECTIONS' => 'Y',
+            'ACTIVE' => 'Y',
+        ],
+        false,
+        ['nTopCount' => 1],
+        ['ID', 'NAME', 'PREVIEW_TEXT']
+    )->GetNext();
+
+    if ($element) {
+        $cases[] = [
+            'SECTION_NAME' => $section['NAME'],
+            'ID' => $element['ID'],
+            'NAME' => $element['NAME'],
+            'PREVIEW_TEXT' => $element['PREVIEW_TEXT'],
+        ];
+    }
+}
+?>
         <section class="cases">
             <div class="cases__grid">
-                <!-- 1 -->
-                <article onclick="window.location.href='/keis/'" class="case">
-                    <span class="case__badge">Сервисная поддержка</span>
-                    <div>
-                        <h3 class="case__title">Название кейса</h3>
-                        <p class="case__desc">Краткое описание кейса</p>
-                    </div>
-                </article>
-
-                <!-- 2 -->
-                <article onclick="window.location.href='/keis/'" class="case">
-                    <span class="case__badge">Монтаж</span>
-                    <div>
-                        <h3 class="case__title">Название кейса</h3>
-                        <p class="case__desc">Краткое описание кейса</p>
-                    </div>
-                </article>
-
-                <!-- 3 — фичерная, тянется на 2 ряда -->
-                <article onclick="window.location.href='/keis/'" class="case case--featured">
-                    <span class="case__badge">1C решения</span>
-                    <div>
-                        <h3 class="case__title">Название кейса</h3>
-                        <p class="case__desc">Краткое описание кейса</p>
-                    </div>
-                </article>
-
-                <!-- 4 -->
-                <article onclick="window.location.href='/keis/'" class="case">
-                    <span class="case__badge">Проектирование</span>
-                    <div>
-                        <h3 class="case__title">Название кейса</h3>
-                        <p class="case__desc">Краткое описание кейса</p>
-                    </div>
-                </article>
-
-                <!-- 5 -->
-                <article onclick="window.location.href='/keis/'" class="case">
-                    <span class="case__badge">ИТ-инфраструктура</span>
-                    <div>
-                        <h3 class="case__title">Название кейса</h3>
-                        <p class="case__desc">Краткое описание кейса</p>
-                    </div>
-                </article>
+                <?php foreach ($cases as $index => $case): ?>
+                    <article onclick="window.location.href='/keis/?id=<?= (int)$case['ID']; ?>'" class="case<?= $index === 2 ? ' case--featured' : '' ?>">
+                        <span class="case__badge"><?= htmlspecialcharsbx($case['SECTION_NAME']); ?></span>
+                        <div>
+                            <h3 class="case__title"><?= htmlspecialcharsbx($case['NAME']); ?></h3>
+                            <p class="case__desc"><?= htmlspecialcharsbx($case['PREVIEW_TEXT']); ?></p>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
             </div>
         </section>
 
