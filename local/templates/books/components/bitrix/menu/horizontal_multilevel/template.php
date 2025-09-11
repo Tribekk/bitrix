@@ -103,7 +103,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <a href="/keis/">Кейсы</a>
+                                <a href="/keises/">Кейсы</a>
                             </div>
                             <div>
                                 <a href="/contact/">Контакты</a>
