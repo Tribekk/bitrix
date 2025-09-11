@@ -112,40 +112,19 @@ $APPLICATION->SetTitle("Главная страница");
         <section class="cases">
             <h3>Наши кейсы</h3>
 
-            <div class="cases-viewport">
-                <ul class="cases-track">
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                </ul>
-            </div>
+            <?php
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.list',
+                'cases',
+                [
+                    'IBLOCK_ID' => 10,
+                    'NEWS_COUNT' => 6,
+                    'PARENT_SECTION_CODE' => 'proektirovanie',
+                    'PROPERTY_CODE' => ['PREVIEW'],
+                    'SET_TITLE' => 'N',
+                ]
+            );
+            ?>
         </section>
 
 
@@ -174,42 +153,4 @@ $APPLICATION->SetTitle("Главная страница");
         </section>
     </div>
 
-    <script>
-        (() => {
-            const vps = document.querySelectorAll('.cases-viewport');
-            vps.forEach(vp => {
-                // колесо мыши -> горизонтальный скролл
-                vp.addEventListener('wheel', (e) => {
-                    // если вертикальная прокрутка больше горизонтальной — скроллим по X
-                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                        vp.scrollLeft += e.deltaY;
-                        e.preventDefault(); // важно: иначе страница прокручивается
-                    }
-                }, { passive: false });
-
-                // drag-to-scroll (мышь/тач/стилус)
-                let startX = null, startScrollLeft = 0;
-                vp.addEventListener('pointerdown', (e) => {
-                    startX = e.clientX;
-                    startScrollLeft = vp.scrollLeft;
-                    vp.setPointerCapture(e.pointerId);
-                    vp.style.scrollSnapType = 'none'; // отключим снап во время перетаскивания
-                });
-                vp.addEventListener('pointermove', (e) => {
-                    if (startX !== null) {
-                        const dx = e.clientX - startX;
-                        vp.scrollLeft = startScrollLeft - dx;
-                    }
-                });
-                const endDrag = () => {
-                    startX = null;
-                    // вернём снап
-                    vp.style.scrollSnapType = 'x proximity';
-                };
-                vp.addEventListener('pointerup', endDrag);
-                vp.addEventListener('pointercancel', endDrag);
-                vp.addEventListener('pointerleave', () => { if (startX !== null) endDrag(); });
-            });
-        })();
-    </script>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

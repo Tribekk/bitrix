@@ -66,40 +66,19 @@ $APPLICATION->SetTitle("Главная страница");
         <section class="cases">
             <h3>Наши кейсы</h3>
 
-            <div class="cases-viewport">
-                <ul class="cases-track">
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                    <li class="case-card">
-                        <div class="case-badge">кейс</div>
-                        <div class="case-title">Экзотермический экситон</div>
-                        <div class="case-desc">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                    </li>
-                </ul>
-            </div>
+            <?php
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.list',
+                'cases',
+                [
+                    'IBLOCK_ID' => 10,
+                    'NEWS_COUNT' => 6,
+                    'PARENT_SECTION_CODE' => 'ekspertiza',
+                    'PROPERTY_CODE' => ['PREVIEW'],
+                    'SET_TITLE' => 'N',
+                ]
+            );
+            ?>
         </section>
 
 

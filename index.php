@@ -133,15 +133,25 @@ $APPLICATION->SetTitle("Главная страница");
         <div class="container container-notop">
             <div class="main-title">Технологические партнеры</div>
         </div>
-        <div class="main-partners-list">
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner1.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner2.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner3.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner4.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner5.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner1.png"></div></div>
-            <div class="main-partners-item"><div class="main-partners-it"><img src="/local/templates/books/images/new_img/partner2.png"></div></div>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "mainPartners",
+            [
+                "IBLOCK_TYPE" => "new_content",
+                "IBLOCK_ID" => "9",
+                "NEWS_COUNT" => "20",
+                "SORT_BY1" => "SORT",
+                "SORT_ORDER1" => "ASC",
+                "PROPERTY_CODE" => ["PICTURE"],
+                "CHECK_DATES" => "Y",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "36000000",
+                "CACHE_GROUPS" => "N",
+                "SET_TITLE" => "N",
+                "INCLUDE_SUBSECTIONS" => "N"
+            ],
+            false
+        );?>
     </div>
 
 	
