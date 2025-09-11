@@ -159,52 +159,21 @@ $APPLICATION->SetTitle("Главная страница");
         <div class="container container-notop">
             <div class="main-title">новости компании</div>
         </div>
-        <div class="main-news-list">
-            <div class="main-news-item">
-                <div class="main-news-it">
-                    <a href="#">
-                        <div class="main-news-item-badge">Новости</div>
-                        <div class="main-news-item-block">
-                            <div class="main-news-item-title">Экзотермический экситон</div>
-                            <div class="main-news-item-text">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно. Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="main-news-item">
-                <div class="main-news-it">
-                    <a href="#">
-                        <div class="main-news-item-badge">Новости</div>
-                        <div class="main-news-item-block">
-                            <div class="main-news-item-title">Экзотермический экситон</div>
-                            <div class="main-news-item-text">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="main-news-item">
-                <div class="main-news-it">
-                    <a href="#">
-                        <div class="main-news-item-badge">Новости</div>
-                        <div class="main-news-item-block">
-                            <div class="main-news-item-title">Экзотермический экситон</div>
-                            <div class="main-news-item-text">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="main-news-item">
-                <div class="main-news-it">
-                    <a href="#">
-                        <div class="main-news-item-badge">Новости</div>
-                        <div class="main-news-item-block">
-                            <div class="main-news-item-title">Экзотермический экситон</div>
-                            <div class="main-news-item-text">Исследователями из разных лабораторий неоднократно наблюдалось, как расслоение самопроизвольно</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php
+            $newsMainFilter = ['=PROPERTY_MAIN' => 1];
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.list',
+                'main-news',
+                [
+                    'IBLOCK_ID' => 11,
+                    'NEWS_COUNT' => 100,
+                    'FILTER_NAME' => 'newsMainFilter',
+                    'PROPERTY_CODE' => ['PREVIEW'],
+                    'SET_TITLE' => 'N',
+                    'CHECK_DATES' => 'Y',
+                ]
+            );
+            ?>
     </div>
 </div>
 
