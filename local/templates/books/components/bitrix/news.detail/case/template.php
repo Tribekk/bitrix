@@ -21,7 +21,9 @@ Asset::getInstance()->addJs($templateFolder.'/script.js');
                 <?php foreach ($arResult['RELATED_ITEMS'] as $item): ?>
                     <li class="case-card">
                         <div class="case-badge">Кейс</div>
-                        <div class="case-title"><?= htmlspecialchars($item['NAME']) ?></div>
+                        <a href="/keis/?id=<?= (int)$item['ID'] ?>" class="case-title">
+                            <?= htmlspecialchars($item['NAME']) ?>
+                        </a>
                         <div class="case-desc"><?= htmlspecialchars($item['PREVIEW']) ?></div>
                     </li>
                 <?php endforeach; ?>

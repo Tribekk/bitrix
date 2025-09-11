@@ -9,7 +9,7 @@ Asset::getInstance()->addJs($templateFolder . '/script.js');
         <?php foreach ($arResult['ITEMS'] as $item): ?>
             <li class="case-card">
                 <div class="case-badge">кейс</div>
-                <a href="<?= htmlspecialchars($item['DETAIL_PAGE_URL']) ?>" class="case-title"><?= htmlspecialchars($item['NAME']) ?></a>
+                <a href="/keis/?id=<?= (int)$item['ID'] ?>" class="case-title"><?= htmlspecialchars($item['NAME']) ?></a>
                 <?php if (!empty($item['PROPERTIES']['PREVIEW']['VALUE'])): ?>
                     <div class="case-desc"><?= htmlspecialchars($item['PROPERTIES']['PREVIEW']['VALUE']) ?></div>
                 <?php endif; ?>

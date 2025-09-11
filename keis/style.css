@@ -35,12 +35,12 @@
     }
 }
 
-section{
+section.news, section.cases{
     padding: 40px 350px;
 }
 
 @media (max-width: 1240px) {
-    section{
+    section.news, section.cases{
         padding: 32px 16px;
     }
 }
@@ -73,7 +73,7 @@ section{
 .head_container h2{
     font-weight: 400;
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 88px;
 }
 
 @media (max-width: 1400px) {
@@ -92,6 +92,7 @@ section{
         padding: 64px 24px 40px;
     }
     .head_container h2{
+        margin: 0 0 32px;
         font-size: 20px;
     }
 }
@@ -106,9 +107,10 @@ section{
     }
     .head_container h2{
         font-size: 18px;
+        margin-bottom: 48px;
     }
 }
-section.news{
+section.news, section.cases{
     padding-top: 0;
     padding-bottom: 0;
 }

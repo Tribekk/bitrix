@@ -1,5 +1,8 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+?>
+<link rel="stylesheet" href="/keis/style.css">
+<?php
 $APPLICATION->SetTitle('Кейс');
 $APPLICATION->IncludeComponent(
     'bitrix:news.detail',
